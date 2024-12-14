@@ -1,15 +1,58 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import Howto from "../components/Howto.astro";
+import Abonnement from "../components/Abonnement.astro";
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+
+<MainLayout title="Readly">
+  <div class="flex justify-center mt-20">
+    <section class="border border-dashed border-2 border-farvenavn-blackish rounded-[150px] bg-farvenavn-whiteish w-[83%] p-12">
+      <h1 class="tracking-tight font-serif font-bold text-9xl text-center">
+        MERE LÆSNING <br />
+        <span class="font-light italic">MINDRE BESVÆR</span>
+      </h1>
+      <p class="mt-10 flex items-baseline justify-center leading-tight font-light italic text-2xl">
+        Med <span class="text-farvenavn-primary font-serif font-bold italic text-5xl tracking-[-0.07em] mx-1">Readly</span> får du håndplukkede bøger leveret lige til din dør.
+      </p>
+      <p class="flex justify-center leading-tight font-light italic text-2xl">
+        Vælg din yndlingsgenre eller prøv noget nyt med vores Surprisebox!
+      </p>
+      <div class="mt-6 flex justify-center">
+        <Button text="Vælg abonnement"></Button>
+      </div>
+    </section>
+  </div>
+  <section class="flex gap-14 mx-24 mt-20 items-baseline">
+	<div>
+		<img src="placeholder.png" alt="">
+	  <Howto
+		titel="Vælg din vej"
+		text="Vælg din yndlingsgenre, eller lad dig overraske med en bog fra en helt ny verden. Uanset hvad, er din næste læseoplevelse kun få klik væk."
+	  ></Howto>
+	</div>
+	  <div>
+		<img src="placeholder.png" alt="">
+	  <Howto
+		titel="Vi finder den perfekte bog"
+		text="Vores team håndplukker månedens bedste bog inden for din valgte genre – eller en overraskelse, der garanteret vil inspirere dig."
+	  ></Howto>
+	</div>
+	<div>
+		<img src="placeholder.png" alt="">
+	  <Howto
+		titel="Læs, nyd og gentag"
+		text="Modtag din bog, sæt dig godt til rette, og fordyb dig i fortællingen. Når du er klar, venter endnu en læseoplevelse næste måned."
+	  ></Howto></div>
+</section>
+<img src="/topborder.svg" alt="" class="mb-[-1px] w-screen">
+<div class="bg-farvenavn-whiteish">
+<Abonnement titel="Genrebox" text1="Foretrækker du krimi, romantik eller måske fantasy? 
+
+text2="Med Genrebox vælger du selv, hvilken type bog der lander i din postkasse hver måned. 
+Din bog, din stil, dit valg."></Abonnement>
+
+</div>
+<img src="/btmborder.svg" alt="" class="mt-[-1px]">
+
 </MainLayout>
