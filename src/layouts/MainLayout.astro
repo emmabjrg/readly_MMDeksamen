@@ -19,33 +19,9 @@ const { title } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap"
       rel="stylesheet"
     />
-    <style>
-      @keyframes load-up {
-        0% {
-          opacity: 10%;
-        }
-        100% {
-        }
-      }
-      .load-animation {
-        animation: load-up 3s ease forwards;
-      }
-    </style>
   </head>
 
   <body class="bg-farvenavn-primary font-sans text-farvenavn-blackish">
-    <div
-      id="preloader"
-      class="fixed inset-0 flex items-center justify-center bg-farvenavn-primary z-50"
-    >
-      <img
-        src="preloader.svg"
-        alt="Logo"
-        id="logo"
-        class="w-72 load-animation"
-      />
-    </div>
-
     <header>
       <Header />
     </header>
