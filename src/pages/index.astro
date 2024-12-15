@@ -3,28 +3,10 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Howto from "../components/Howto.astro";
 import Abonnement from "../components/Abonnement.astro";
+import Genre from "../components/Genre.astro";
 ---
 
-<style>
-  @keyframes load-up {
-    0% {
-      opacity: 10%;
-    }
-    100% {
-    }
-  }
-  .load-animation {
-    animation: load-up 3s ease forwards;
-  }
-</style>
-
 <MainLayout title="Readly">
-  <div
-    id="preloader"
-    class="fixed inset-0 flex items-center justify-center bg-farvenavn-primary z-50"
-  >
-    <img src="preloader.svg" alt="Logo" id="logo" class="w-72 load-animation" />
-  </div>
   <div class="flex justify-center mt-20">
     <section
       class="border-dashed border-2 border-farvenavn-blackish rounded-[150px] bg-farvenavn-whiteish w-[83%] p-12"
@@ -74,20 +56,23 @@ import Abonnement from "../components/Abonnement.astro";
   </section>
   <section class="mt-28">
     <img src="/topborder.svg" alt="" class="mb-[-1px] w-screen" />
-    <div class="bg-farvenavn-whiteish flex px-20 justify-center gap-40">
-      <Abonnement
-        titel="Genrebox"
-        skriv="Foretrækker du krimi, romantik eller måske fantasy?"
-        text={`Med Genrebox vælger du selv, hvilken type bog der lander i din postkasse hver måned.`}
-        text2="Din bog, din stil, dit valg."
-      />
-      <Abonnement
-        titel="Surprisebox"
-        skriv="Er du klar til at udforske noget nyt?"
-        text={`Surprisebox sender dig månedens bedste bog - fra en genre, du måske aldrig har prøvet før. `}
-        text2="Perfekt til den nysgerrige læser."
-      />
-    </div>
+    <section class="bg-farvenavn-whiteish">
+      <div class="flex px-20 justify-center gap-40">
+        <Abonnement
+          titel="Genrebox"
+          skriv="Foretrækker du krimi, romantik eller måske fantasy?"
+          text={`Med Genrebox vælger du selv, hvilken type bog der lander i din postkasse hver måned.`}
+          text2="Din bog, din stil, dit valg."
+        />
+        <Abonnement
+          titel="Surprisebox"
+          skriv="Er du klar til at udforske noget nyt?"
+          text={`Surprisebox sender dig månedens bedste bog - fra en genre, du måske aldrig har prøvet før. `}
+          text2="Perfekt til den nysgerrige læser."
+        />
+      </div>
+      <div><Genre /></div>
+    </section>
     <img src="/btmborder.svg" alt="" class="mt-[-1px]" />
   </section>
 </MainLayout>
