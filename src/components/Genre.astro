@@ -10,7 +10,7 @@ import Genrekortblue from "../components/Genrekortblue.astro";
       <div class="swiper-slide w-[300px] shrink-0 mr-5">
         <Genrekortgreen
           genrenavn="Biografi & non-fiction"
-          text1="Fordyb dig i virkelighedens fortællinger, inspirerende livshistorier og spændende fakta."
+          text1="Fordyb dig i virkelighedens facinerende fortællinger, inspirerende livshistorier og spændende fakta."
           text2="Perfekt til dig, der elsker at lære noget nyt og blive klogere på verden."
           titel1="Oplyst"
           forfatter1="Tara Westover"
@@ -25,6 +25,56 @@ import Genrekortblue from "../components/Genrekortblue.astro";
           <img
             slot="two"
             src="/books/bio_storm.webp"
+            alt=""
+            class="rounded-xl"
+          />
+        </Genrekortgreen>
+      </div>
+
+      <!-- fiktion genrekort -->
+      <div class="swiper-slide w-[300px] shrink-0 mr-5">
+        <Genrekortblue
+          genrenavn="Generel fiktion"
+          text1="Fordyb dig i gribende fortællinger om livets store og små øjeblikke. Generel fiktion bringer universelle historier og temaer til live."
+          text2="Perfekt til læsere, der elsker karakterdrevne og realistiske fortællinger."
+          titel1="Cosmos"
+          forfatter1="Lucia Odoom"
+          titel2="Ned Fra Himlen"
+          forfatter2="Liv Duvå"
+          ><img
+            slot="one"
+            src="/books/fik_cosmos.webp"
+            alt=""
+            class="rounded-xl"
+          />
+          <img
+            slot="two"
+            src="/books/fik_duvå.webp"
+            alt=""
+            class="rounded-xl"
+          />
+        </Genrekortblue>
+      </div>
+
+      <!-- historiske romaner genrekort -->
+      <div class="swiper-slide w-[300px] shrink-0 mr-5">
+        <Genrekortgreen
+          genrenavn="Historiske romaner"
+          text1="Træd tilbage i tiden og oplev drama, kærlighed og skæbnesvangre øjeblikke fra verdenshistorien. "
+          text2="Perfekt til læsere, der elsker fortællinger baseret på virkelige begivenheder eller historiske epoker."
+          titel1="De Fire Vinde"
+          forfatter1="Kristen Hannah"
+          titel2="Annas Sang"
+          forfatter2="Benjamin Koppel"
+          ><img
+            slot="one"
+            src="/books/his_defire.webp"
+            alt=""
+            class="rounded-xl"
+          />
+          <img
+            slot="two"
+            src="/books/his_annassang.webp"
             alt=""
             class="rounded-xl"
           />
@@ -56,61 +106,11 @@ import Genrekortblue from "../components/Genrekortblue.astro";
         </Genrekortblue>
       </div>
 
-      <!-- historiske romaner genrekort -->
-      <div class="swiper-slide w-[300px] shrink-0 mr-5">
-        <Genrekortgreen
-          genrenavn="Historiske romaner"
-          text1="Træd tilbage i tiden og oplev drama, kærlighed og skæbnesvangre øjeblikke fra verdenshistorien. "
-          text2="Perfekt til læsere, der elsker fortællinger baseret på virkelige begivenheder eller historiske epoker."
-          titel1="De Fire Vinde"
-          forfatter1="Kristen Hannah"
-          titel2="Annas Sang"
-          forfatter2="Benjamin Koppel"
-          ><img
-            slot="one"
-            src="/books/bio_oplyst.webp"
-            alt=""
-            class="rounded-xl"
-          />
-          <img
-            slot="two"
-            src="/books/bio_storm.webp"
-            alt=""
-            class="rounded-xl"
-          />
-        </Genrekortgreen>
-      </div>
-
-      <!-- fiktion genrekort -->
-      <div class="swiper-slide w-[300px] shrink-0 mr-5">
-        <Genrekortblue
-          genrenavn="Generel fiktion"
-          text1="Fordyb dig i gribende fortællinger om livets store og små øjeblikke. Generel fiktion bringer universelle historier og temaer til live."
-          text2="Perfekt til læsere, der elsker karakterdrevne og realistiske fortællinger."
-          titel1="Cosmos"
-          forfatter1="Lucia Odoom"
-          titel2="Ned Fra Himlen"
-          forfatter2="Liv Duvå"
-          ><img
-            slot="one"
-            src="/books/bio_oplyst.webp"
-            alt=""
-            class="rounded-xl"
-          />
-          <img
-            slot="two"
-            src="/books/bio_storm.webp"
-            alt=""
-            class="rounded-xl"
-          />
-        </Genrekortblue>
-      </div>
-
       <!-- romantik genrekort -->
       <div class="swiper-slide w-[300px] shrink-0 mr-5">
         <Genrekortgreen
-          genrenavn="Romantik"
-          text1="Bliv opslugt af historier fyldt med store følelser, kærlighed og dramatiske øjeblikke. "
+          genrenavn="Romantiske romaner"
+          text1="Bliv opslugt af historier der udforsker de store følelser, kærlighedens op og nedture samt dramatiske øjeblikke."
           text2="Perfekt til læsere, der elsker hjertevarme fortællinger og romantiske eventyr."
           titel1="Mit Lykkested"
           forfatter1="Emily Henry"
@@ -118,13 +118,13 @@ import Genrekortblue from "../components/Genrekortblue.astro";
           forfatter2="Linea Maja Ernst"
           ><img
             slot="one"
-            src="/books/bio_oplyst.webp"
+            src="/books/rom_mitlykke.webp"
             alt=""
             class="rounded-xl"
           />
           <img
             slot="two"
-            src="/books/bio_storm.webp"
+            src="/books/rom_navlen.webp"
             alt=""
             class="rounded-xl"
           />
@@ -143,13 +143,13 @@ import Genrekortblue from "../components/Genrekortblue.astro";
           forfatter2="Anna Grue"
           ><img
             slot="one"
-            src="/books/bio_oplyst.webp"
+            src="/books/krimi_dråbe.webp"
             alt=""
             class="rounded-xl"
           />
           <img
             slot="two"
-            src="/books/bio_storm.webp"
+            src="/books/krimi_bryllup.webp"
             alt=""
             class="rounded-xl"
           />
