@@ -13,6 +13,10 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{Astro.props.title}</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@10/swiper-bundle.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,6 +37,9 @@ const { title } = Astro.props;
     <footer>
       <Footer />
     </footer>
+    <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js" defer
+    ></script>
+
     <script src="/preloader.js" is:inline></script>
   </body>
 </html>

@@ -1,0 +1,206 @@
+---
+import Genrekortgreen from "../components/Genrekortgreen.astro";
+import Genrekortblue from "../components/Genrekortblue.astro";
+---
+
+<Genrekortgreen
+  genrenavn="Biografi & non-fiction"
+  text1="Fordyb dig i virkelighedens fortællinger, inspirerende livshistorier og spændende fakta. "
+  text2="Perfekt til dig, der elsker at lære noget nyt og blive klogere på verden."
+  titel="Oplyst"
+  forfatter="Tara Westover"
+  ><img slot="one" src="/books/bio_oplyst.webp" alt="" />
+  <img slot="two" src="/books/bio_storm.webp" alt="" /></Genrekortgreen
+>
+
+<Genrekortblue genrenavn="" text1="" text2="" titel="" forfatter="" />
+
+<div
+  class="carousel-container relative flex justify-center items-center overflow-hidden"
+>
+  <!-- Previous Button -->
+  <button
+    id="prev"
+    class="absolute left-4 z-10 bg-white p-2 rounded-full shadow-md"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+    </svg>
+  </button>
+
+  <!-- Carousel Items -->
+  <div
+    id="carousel"
+    class="flex transition-transform duration-500 ease-in-out gap-10 w-full"
+  >
+    <Genrekortgreen
+      genrenavn="Biografi & non-fiction"
+      text1="Fordyb dig i virkelighedens fortællinger, inspirerende livshistorier og spændende fakta. "
+      text2="Perfekt til dig, der elsker at lære noget nyt og blive klogere på verden."
+      titel1="Oplyst"
+      forfatter1="Tara Westover"
+      titel2="Storm På Vej"
+      forfatter2="Steffen Kretz"
+      ><img slot="one" src="/books/bio_oplyst.webp" alt="" class="rounded-xl" />
+      <img
+        slot="two"
+        src="/books/bio_storm.webp"
+        alt=""
+        class="rounded-xl"
+      /></Genrekortgreen
+    >
+
+    <Genrekortblue
+      genrenavn="Biografi & non-fiction"
+      text1="Fordyb dig i virkelighedens fortællinger, inspirerende livshistorier og spændende fakta. "
+      text2="Perfekt til dig, der elsker at lære noget nyt og blive klogere på verden."
+      titel1="Oplyst"
+      forfatter1="Tara Westover"
+      titel2="Storm På Vej"
+      forfatter2="Steffen Kretz"
+      ><img slot="one" src="/books/bio_oplyst.webp" alt="" class="rounded-xl" />
+      <img
+        slot="two"
+        src="/books/bio_storm.webp"
+        alt=""
+        class="rounded-xl"
+      /></Genrekortblue
+    >
+    <Genrekortgreen
+      genrenavn="Biografi & non-fiction"
+      text1="Fordyb dig i virkelighedens fortællinger, inspirerende livshistorier og spændende fakta. "
+      text2="Perfekt til dig, der elsker at lære noget nyt og blive klogere på verden."
+      titel1="Oplyst"
+      forfatter1="Tara Westover"
+      titel2="Storm På Vej"
+      forfatter2="Steffen Kretz"
+      ><img slot="one" src="/books/bio_oplyst.webp" alt="" class="rounded-xl" />
+      <img
+        slot="two"
+        src="/books/bio_storm.webp"
+        alt=""
+        class="rounded-xl"
+      /></Genrekortgreen
+    >
+
+    <Genrekortblue
+      genrenavn="Biografi & non-fiction"
+      text1="Fordyb dig i virkelighedens fortællinger, inspirerende livshistorier og spændende fakta. "
+      text2="Perfekt til dig, der elsker at lære noget nyt og blive klogere på verden."
+      titel1="Oplyst"
+      forfatter1="Tara Westover"
+      titel2="Storm På Vej"
+      forfatter2="Steffen Kretz"
+      ><img slot="one" src="/books/bio_oplyst.webp" alt="" class="rounded-xl" />
+      <img
+        slot="two"
+        src="/books/bio_storm.webp"
+        alt=""
+        class="rounded-xl"
+      /></Genrekortblue
+    >
+    <Genrekortgreen
+      genrenavn="Biografi & non-fiction"
+      text1="Fordyb dig i virkelighedens fortællinger, inspirerende livshistorier og spændende fakta. "
+      text2="Perfekt til dig, der elsker at lære noget nyt og blive klogere på verden."
+      titel1="Oplyst"
+      forfatter1="Tara Westover"
+      titel2="Storm På Vej"
+      forfatter2="Steffen Kretz"
+      ><img slot="one" src="/books/bio_oplyst.webp" alt="" class="rounded-xl" />
+      <img
+        slot="two"
+        src="/books/bio_storm.webp"
+        alt=""
+        class="rounded-xl"
+      /></Genrekortgreen
+    >
+
+    <Genrekortblue
+      genrenavn="Biografi & non-fiction"
+      text1="Fordyb dig i virkelighedens fortællinger, inspirerende livshistorier og spændende fakta. "
+      text2="Perfekt til dig, der elsker at lære noget nyt og blive klogere på verden."
+      titel1="Oplyst"
+      forfatter1="Tara Westover"
+      titel2="Storm På Vej"
+      forfatter2="Steffen Kretz"
+      ><img slot="one" src="/books/bio_oplyst.webp" alt="" class="rounded-xl" />
+      <img
+        slot="two"
+        src="/books/bio_storm.webp"
+        alt=""
+        class="rounded-xl"
+      /></Genrekortblue
+    >
+  </div>
+
+  <!-- Next Button -->
+  <button
+    id="next"
+    class="absolute right-4 z-10 bg-white p-2 rounded-full shadow-md"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M8.25 4.5L15.75 12l-7.5 7.5"></path>
+    </svg>
+  </button>
+</div>
+
+<style>
+  .carousel-container {
+    display: flex;
+    overflow: hidden;
+    width: calc(3 * 300px); /* 300px er bredden af hvert kort */
+  }
+
+  #carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+</style>
+
+<script>
+  const carousel = document.getElementById("carousel");
+  const prevButton = document.getElementById("prev");
+  const nextButton = document.getElementById("next");
+
+  let currentIndex = 0;
+
+  // Function to update carousel position
+  const updateCarousel = () => {
+    const offset = currentIndex * -carousel.clientWidth;
+    carousel.style.transform = `translateX(${offset}px)`;
+  };
+
+  // Event listeners for buttons
+  prevButton.addEventListener("click", () => {
+    currentIndex =
+      currentIndex > 0 ? currentIndex - 1 : carousel.children.length - 1;
+    updateCarousel();
+  });
+
+  nextButton.addEventListener("click", () => {
+    currentIndex =
+      currentIndex < carousel.children.length - 1 ? currentIndex + 1 : 0;
+    updateCarousel();
+  });
+</script>

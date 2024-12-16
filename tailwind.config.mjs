@@ -13,13 +13,19 @@ export default {
                     blackish: '#06072D',
                 },},
 
-
-
                 fontFamily: {
                     sans: ['Roboto', 'sans-serif'], // Til moderne/brugsfokus
                     serif: ['Cormorant Garamond', 'serif'], // Til elegant stil
                 },
         
+                    fontSize: {
+                    h1: ["140px"],
+                    h2: ["100px"],
+                    h3: ["70px"],
+                    h4: ["40px"],
+                    p: ["28px"],
+                    storp: ["34px"],
+                },
         },
     },
     plugins: [

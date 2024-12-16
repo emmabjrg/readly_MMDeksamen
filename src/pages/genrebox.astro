@@ -1,10 +1,58 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
-
-import Abonnement from "../components/Abonnement.astro";
+import Genre from "../components/Genre.astro";
+import Abonnement from "./abonnement.astro";
 ---
 
-<MainLayout title="Om Readly">
-  <div></div>
+<MainLayout title="Genrebox">
+  <div class="flex justify-center mt-20">
+    <div
+      class="border-dashed border-2 border-farvenavn-blackish rounded-[150px] bg-farvenavn-whiteish w-[83%] p-12 px-40 text-center"
+    >
+      <h2 class="font-serif text-h2 uppercase font-bold p-4">Genrebox</h2>
+      <p class="text-p font-light">
+        Med Genrebox får du muligheden for at vælge netop den genre, du elsker
+        mest. Uanset om du er til nervepirrende krimier, romantiske fortællinger
+        eller fantastiske fantasy-universer, leverer vi håndplukkede bøger, der
+        passer perfekt til din smag.
+      </p>
+      <div>
+        <h4 class="text-h4 font-serif italic mt-16 font-bold">
+          Vælg din yndlingsgenre
+        </h4>
+        <p class="text-p font-light px-20">
+          Foretrækker du spænding, kærlighed eller eventyr? Gå på opdagelse i
+          vores genrer, og vælg den, der passer til dig.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-h4 font-serif italic mt-12 font-bold">
+          Modtag månedens bog
+        </h4>
+        <p class="text-p font-light px-20">
+          Hver måned sender vi dig en nøje udvalgt bog fra din valgte genre -
+          altid med et nyt og spændende twist.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-h4 font-serif italic mt-12 font-bold">
+          Fordyb dig i historien
+        </h4>
+        <p class="text-p font-light px-20">
+          Sæt dig godt til rette, og nyd en bog, der er valgt specielt til dig.
+          Perfekt til rolige stunder eller som inspiration til din bogreol.
+        </p>
+      </div>
+      <Button text="Til abonnementsvælger" />
+    </div>
+  </div>
+  <section class="mt-20">
+    <img src="/topborder.svg" alt="" class="mb-[-1px] w-screen" />
+
+    <section class="bg-farvenavn-whiteish">
+      <Genre />
+    </section>
+    <img src="/btmborder.svg" alt="" class="mt-[-1px]" />
+  </section>
 </MainLayout>

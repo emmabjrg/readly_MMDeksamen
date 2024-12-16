@@ -1,23 +1,44 @@
 ---
-const { genrenavn, text1, text2, forfatter, titel } = Astro.props;
+const { genrenavn, text1, text2, forfatter1, titel1, titel2, forfatter2 } =
+  Astro.props;
 ---
 
 <div
   class="bg-farvenavn-accent border
   border-farvenavn-blackish
-  w-[38%]
-  rounded-[60px] flex flex-col justify-center"
+  w-auto
+  rounded-[60px] flex flex-col justify-center p-8"
 >
-  <h5 class="text-center">{genrenavn}</h5>
-  <p class="text-center">{text1}</p>
-  <p class="text-center">{text2}</p>
-  <h6 class="text-center">Tidligere valg</h6>
+  <h5 class="text-center font-serif text-4xl font-bold py-3">{genrenavn}</h5>
+  <p class="text-center font-light p-2">{text1}</p>
+  <p class="text-center font-light p-2">{text2}</p>
+  <h6
+    class="text-center font-serif text-farvenavn-primary font-bold text-xl p-2"
+  >
+    Tidligere valg
+  </h6>
   <div class="flex">
-    <article class="">
-      <img src="/placeholder.png" alt="" /><div class="text-center">
-        <p>{titel}</p><p>{forfatter}</p>
+    <article class="flex flex-col m-4">
+      <slot name="one" /><div class="text-center">
+        <p class="font-light text-farvenavn-primary leading-tight mt-2">
+          {titel1}
+        </p><p
+          class="font-serif uppercase text-farvenavn-primary text-sm italic"
+        >
+          {forfatter1}
+        </p>
       </div>
     </article>
-    <article><img src="/placeholder.png" alt="" /><div></div></article>
+    <article class="flex flex-col m-4">
+      <slot name="two" /><div class="text-center">
+        <p class="font-light text-farvenavn-primary leading-tight mt-2">
+          {titel2}
+        </p><p
+          class="font-serif uppercase text-farvenavn-primary text-sm italic"
+        >
+          {forfatter2}
+        </p>
+      </div>
+    </article>
   </div>
 </div>
