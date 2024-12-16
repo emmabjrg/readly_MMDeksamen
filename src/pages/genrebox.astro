@@ -8,7 +8,7 @@ import Abonnement from "./abonnement.astro";
 <MainLayout title="Genrebox">
   <div class="flex justify-center mt-20">
     <div
-      class="border-dashed border-2 border-farvenavn-blackish rounded-[150px] bg-farvenavn-whiteish w-[83%] p-12 px-40 text-center"
+      class="border-dashed border-2 border-farvenavn-blackish rounded-[150px] bg-farvenavn-whiteish w-[70%] p-12 px-40 text-center"
     >
       <h2 class="font-serif text-h2 uppercase font-bold p-4">Genrebox</h2>
       <p class="text-p font-light">
@@ -35,7 +35,7 @@ import Abonnement from "./abonnement.astro";
           altid med et nyt og spændende twist.
         </p>
       </div>
-      <div>
+      <div class="mb-10">
         <h4 class="text-h4 font-serif italic mt-12 font-bold">
           Fordyb dig i historien
         </h4>
@@ -44,7 +44,9 @@ import Abonnement from "./abonnement.astro";
           Perfekt til rolige stunder eller som inspiration til din bogreol.
         </p>
       </div>
-      <Button text="Til abonnementsvælger" />
+      <div class="p-4">
+        <Button text="Til abonnementsvælger" />
+      </div>
     </div>
   </div>
   <section class="mt-20">
@@ -54,5 +56,14 @@ import Abonnement from "./abonnement.astro";
       <Genre />
     </section>
     <img src="/btmborder.svg" alt="" class="mt-[-1px]" />
+  </section>
+
+  <section class="flex flex-col justify-center gap-4 pt-28">
+    <h4
+      class="text-h4 uppercase text-farvenavn-whiteish font-medium font-serif text-center"
+    >
+      Har du spørgsmål? Vi er her for at hjælpe!
+    </h4>
+    <Button text="Kontakt os" />
   </section>
 </MainLayout>
