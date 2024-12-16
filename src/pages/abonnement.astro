@@ -1,80 +1,149 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import Buttontwo from "../components/Buttontwo.astro";
 ---
 
 <MainLayout title="Om Readly">
   <div>
-    <div
-      class="max-w-4xl mx-auto mt-10 p-5 bg-white shadow rounded-lg"
-      x-data="{ step: 1, abonnement: '', genre: '' }"
+    <h2
+      class="text-h2 md:text-h2 font-bold font-serif text-farvenavn-whiteish uppercase my-20 text-center"
     >
-      <!-- Step 1: Vælg Abonnement -->
-      <div x-show="step === 1">
-        <h1 class="text-2xl font-bold mb-5">Vælg Abonnement</h1>
-        <div class="flex gap-5">
-          <button
-            @click="abonnement = 'Genre'; step = 2"
-            class="w-1/2 p-5 bg-green-200 rounded-lg text-center font-bold text-lg hover:bg-green-300"
-          >
-            Genre
-          </button>
-          <button
-            @click="abonnement = 'Surprise'; step = 2"
-            class="w-1/2 p-5 bg-green-200 rounded-lg text-center font-bold text-lg hover:bg-green-300"
-          >
-            Surprise
-          </button>
-        </div>
-      </div>
+      Vælg Abonnement
+    </h2>
+    <img src="/topborder.svg" alt="" class="mb-[-1px] w-screen" />
 
-      <!-- Step 2: Vælg Genre -->
-      <div x-show="step === 2">
-        <h1 class="text-2xl font-bold mb-5">Vælg Genre</h1>
-        <div class="flex flex-col gap-3">
-          <button
-            @click="genre = 'Romantik'; step = 3"
-            class="p-3 bg-gray-200 rounded hover:bg-green-200">Romantik</button
-          >
-          <button
-            @click="genre = 'Krimi'; step = 3"
-            class="p-3 bg-gray-200 rounded hover:bg-green-200">Krimi</button
-          >
-          <button
-            @click="genre = 'Fiktion'; step = 3"
-            class="p-3 bg-gray-200 rounded hover:bg-green-200">Fiktion</button
-          >
-        </div>
-      </div>
+    <!-- Wrapper med Alpine.js -->
+    <section class="bg-farvenavn-whiteish p-0 m-0">
+      <div
+        class="max-w-4xl mx-auto px-5 py-10 rounded-lg"
+        x-data="{ step: 1, abonnement: '', genre: '' }"
+      >
+        <!-- Step 1: Vælg Abonnement -->
+        <div x-show="step === 1" class="space-y-6">
+          <h4 class="text-h4 text-center pb-10 font-light">
+            Hvilket abonnement?
+          </h4>
 
-      <!-- Step 3: Oversigt -->
-      <div x-show="step === 3">
-        <h1 class="text-2xl font-bold mb-5">Din Oversigt</h1>
-        <div class="p-5 bg-gray-50 rounded-lg shadow-md">
-          <p class="mb-3">
-            <strong>Abonnement:</strong>
-            <span x-text="abonnement"></span>
-          </p>
-          <p><strong>Genre:</strong> <span x-text="genre"></span></p>
-        </div>
-        <button
-          @click="step = 4"
-          class="mt-5 bg-blue-500 text-white px-5 py-2 rounded hover:bg-blue-600"
-          >Gå til Betaling</button
-        >
-      </div>
-
-      <!-- Step 4: Betaling -->
-      <div x-show="step === 4">
-        <h1 class="text-2xl font-bold mb-5">Betaling</h1>
-        <div class="p-5 bg-gray-50 rounded-lg">
-          <p class="text-lg mb-3">Din ordre er klar til betaling.</p>
-          <button
-            class="bg-green-500 text-white px-5 py-2 rounded hover:bg-green-600"
-            >Køb</button
+          <div class="flex flex-col md:flex-row gap-6">
+            <button
+              @click="abonnement = 'Genrebox'; step = 2"
+              class="w-full md:w-1/2 p-6 text-farvenavn-whiteish bg-farvenavn-primary rounded-3xl text-center font-bold text-h4 font-serif uppercase hover:bg-farvenavn-blackish transition border border-farvenavn-blackish"
+            >
+              Genrebox <br />
+              <span
+                class="font-light text-p_genre text-farvenavn-accent normal-case font-sans"
+                >Din bog, din stil, dit valg.</span
+              >
+            </button>
+            <button
+              @click="abonnement = 'Surprisebox'; step = 3, genre = 'Overraskelse hver måned'"
+              class="w-full md:w-1/2 p-6 text-farvenavn-whiteish bg-farvenavn-primary rounded-3xl text-center font-bold text-h4 font-serif uppercase hover:bg-farvenavn-blackish transition border border-farvenavn-blackish"
+            >
+              Surprisebox <br />
+              <span
+                class="font-light text-p_genre text-farvenavn-accent normal-case font-sans"
+                >Perfekt til den nysgerrige læser.</span
+              >
+            </button>
+          </div>
+          <a href="/" class="flex justify-center p-8"
+            ><Button text="Annuller" /></a
           >
         </div>
+
+        <!-- Step 2: Vælg Genre -->
+        <div x-show="step === 2" class="space-y-6">
+          <h4 class="text-h4 text-center pb-10 font-light">Hvilken genre?</h4>
+          <div class="flex flex-col gap-4">
+            <button
+              @click="genre = 'Biografier & Non-fiktion'; step = 3"
+              class="p-3 text-p font-serif transition font-medium bg-farvenavn-primary rounded-full hover:bg-farvenavn-blackish text-farvenavn-whiteish border border-farvenavn-blackish text-center"
+            >
+              Biografier & Non-fiktion
+            </button>
+            <button
+              @click="genre = 'Generel Fiktion'; step = 3"
+              class="p-3 text-p font-serif transition font-medium bg-farvenavn-primary rounded-full hover:bg-farvenavn-blackish text-farvenavn-whiteish border border-farvenavn-blackish text-center"
+            >
+              Generel Fiktion
+            </button>
+            <button
+              @click="genre = 'Historiske romaner'; step = 3"
+              class="p-3 text-p font-serif transition font-medium bg-farvenavn-primary rounded-full hover:bg-farvenavn-blackish text-farvenavn-whiteish border border-farvenavn-blackish text-center"
+            >
+              Historiske romaner
+            </button><button
+              @click="genre = 'Fantasy & Sci-fi'; step = 3"
+              class="p-3 text-p font-serif transition font-medium bg-farvenavn-primary rounded-full hover:bg-farvenavn-blackish text-farvenavn-whiteish border border-farvenavn-blackish text-center"
+            >
+              Fantasy & Sci-fi
+            </button>
+            <button
+              @click="genre = 'Romantiske romaner'; step = 3"
+              class="p-3 text-p font-serif transition font-medium bg-farvenavn-primary rounded-full hover:bg-farvenavn-blackish text-farvenavn-whiteish border border-farvenavn-blackish text-center"
+            >
+              Romantiske romaner
+            </button>
+            <button
+              @click="genre = 'Krimi & Spænding'; step = 3"
+              class="p-3 text-p font-serif transition font-medium bg-farvenavn-primary rounded-full hover:bg-farvenavn-blackish text-farvenavn-whiteish border border-farvenavn-blackish text-center"
+            >
+              Krimi & Spænding
+            </button>
+          </div>
+          <a href="/" class="flex justify-center p-8"
+            ><Button text="Annuller" /></a
+          >
+        </div>
+
+        <!-- Step 3: Oversigt -->
+        <div x-show="step === 3" class="space-y-6">
+          <h4 class="text-h4 text-center pb-10 font-light">Din oversigt</h4>
+          <div
+            class="py-16 bg-farvenavn-primary rounded-[60px] border border-farvenavn-blackish flex flex-col justify-center items-center p-14 text-farvenavn-whiteish"
+          >
+            <img src="/preloader.svg" alt="" class="w-[40%] pb-6" />
+            <p class="mb-4 text-center">
+              <span class="font-bold font-serif uppercase italic"
+                >Abonnement:</span
+              >
+              <br />
+              <span class="font-light text-p" x-text="abonnement"></span>
+            </p>
+            <p class="mb-4 text-center">
+              <span class="font-bold font-serif uppercase italic">Genre:</span>
+              <br />
+              <span class="font-light text-p" x-text="genre"></span>
+            </p>
+            <p class="text-center">
+              <span class="font-bold font-serif uppercase italic">Pris:</span
+              ><br />
+              <span class="font-light text-p"> 150,- om måneden.</span>
+            </p>
+          </div>
+          <div class="flex justify-center gap-4">
+            <Button text="Annuller" />
+            <button @click="step = 4">
+              <Buttontwo text="Gå til betaling" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 4: Betaling -->
+        <div x-show="step === 4" class="space-y-6">
+          <h3 class="text-2xl font-semibold text-center">Betaling</h3>
+          <div class="p-5 bg-gray-50 rounded-lg text-center">
+            <p class="text-lg mb-3">Din ordre er klar til betaling.</p>
+            <button
+              class="bg-green-500 text-white px-5 py-2 rounded hover:bg-green-600"
+            >
+              Køb
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   </div>
+  <img src="/btmborder.svg" alt="" class="mt-[-1px] mb-20" />
 </MainLayout>
