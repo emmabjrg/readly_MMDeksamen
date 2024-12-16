@@ -1,0 +1,213 @@
+---
+
+---
+
+<!-- accordion ting -->
+<div class="flex w-full flex-col gap-6 text-farvenavn-blackish">
+  <!-- spørgsmål 1 -->
+  <div
+    x-data="{ isExpanded: false }"
+    class="divide-y overflow-hidden rounded-3xl border border-farvenavn-blackish bg-farvenavn-whiteish"
+  >
+    <!-- Knap der styrer accordionens åbning/lukning -->
+    <button
+      id="controlsAccordionItemOne"
+      type="button"
+      class="text-p flex w-full items-center justify-between bg-farvenavn-whiteish p-6 text-left"
+      aria-controls="accordionItemOne"
+      @click="isExpanded = ! isExpanded"
+      :aria-expanded="isExpanded ? 'true' : 'false'"
+    >
+      <!-- Tekst på knappen -->
+      Hvordan fungerer Readly?
+      <!-- Ikon (pil), der roterer, når accordion åbnes -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke-width="2"
+        stroke="currentColor"
+        class="size-5 shrink-0 transition"
+        aria-hidden="true"
+        :class="isExpanded  ?  'rotate-180'  :  ''"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+      </svg>
+    </button>
+
+    <!-- Indhold der vises/skjules baseret på "isExpanded" -->
+    <div
+      x-cloak
+      x-show="isExpanded"
+      id="accordionItemOne"
+      role="region"
+      aria-labelledby="controlsAccordionItemOne"
+      x-collapse
+    >
+      <div class="p-6 text-p_genre font-light w-[80%]">
+        Readly er en bogabonnementstjeneste, hvor du kan vælge din yndlingsgenre
+        eller lade os overraske dig med vores Surprisebox. Vi leverer
+        håndplukkede bøger direkte til din dør hver måned. Du skal bare læne dig
+        tilbage og nyde læsningen!
+      </div>
+    </div>
+  </div>
+
+  <!-- spørgsmål 2 -->
+  <div
+    x-data="{ isExpanded: false }"
+    class="divide-y overflow-hidden rounded-3xl border border-farvenavn-blackish bg-farvenavn-whiteish"
+  >
+    <!-- Knap der styrer accordionens åbning/lukning -->
+    <button
+      id="controlsAccordionItemOne"
+      type="button"
+      class="text-p flex w-full items-center justify-between bg-farvenavn-whiteish p-6 text-left"
+      aria-controls="accordionItemOne"
+      @click="isExpanded = ! isExpanded"
+      :aria-expanded="isExpanded ? 'true' : 'false'"
+    >
+      <!-- Tekst på knappen -->
+      Kan jeg skifte genre efter tilmelding?
+
+      <!-- Ikon (pil), der roterer, når accordion åbnes -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke-width="2"
+        stroke="currentColor"
+        class="size-5 shrink-0 transition"
+        aria-hidden="true"
+        :class="isExpanded  ?  'rotate-180'  :  ''"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+      </svg>
+    </button>
+
+    <!-- Indhold der vises/skjules baseret på "isExpanded" -->
+    <div
+      x-cloak
+      x-show="isExpanded"
+      id="accordionItemOne"
+      role="region"
+      aria-labelledby="controlsAccordionItemOne"
+      x-collapse
+    >
+      <div class="p-6 text-p_genre font-light w-[80%]">
+        Ja! Du kan altid skifte din genre efter 3 måneder, så din læseoplevelse
+        passer til dine ønsker. Hvis du har valgt Surprisebox, kan du ændre til
+        en specifik genre, når du ønsker det.
+      </div>
+    </div>
+  </div>
+
+  <!-- spørgsmål 3 -->
+  <div
+    x-data="{ isExpanded: false }"
+    class="divide-y overflow-hidden rounded-3xl border border-farvenavn-blackish bg-farvenavn-whiteish"
+  >
+    <!-- Knap der styrer accordionens åbning/lukning -->
+    <button
+      id="controlsAccordionItemOne"
+      type="button"
+      class="text-p flex w-full items-center justify-between bg-farvenavn-whiteish p-6 text-left"
+      aria-controls="accordionItemOne"
+      @click="isExpanded = ! isExpanded"
+      :aria-expanded="isExpanded ? 'true' : 'false'"
+    >
+      <!-- Tekst på knappen -->
+      Hvad hvis jeg allerede har læst den bog, jeg modtager?
+
+      <!-- Ikon (pil), der roterer, når accordion åbnes -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke-width="2"
+        stroke="currentColor"
+        class="size-5 shrink-0 transition"
+        aria-hidden="true"
+        :class="isExpanded  ?  'rotate-180'  :  ''"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+      </svg>
+    </button>
+
+    <!-- Indhold der vises/skjules baseret på "isExpanded" -->
+    <div
+      x-cloak
+      x-show="isExpanded"
+      id="accordionItemOne"
+      role="region"
+      aria-labelledby="controlsAccordionItemOne"
+      x-collapse
+    >
+      <div class="p-6 text-p_genre font-light w-[80%]">
+        Det sker sjældent, da vi nøje udvælger bøger baseret på dine præferencer
+        og nye udgivelser. Hvis det sker, kan du kontakte os, så finder vi en
+        løsning - fx en erstatningsbog.
+      </div>
+    </div>
+  </div>
+
+  <!-- spørgsmål 4 -->
+  <div
+    x-data="{ isExpanded: false }"
+    class="divide-y overflow-hidden rounded-3xl border border-farvenavn-blackish bg-farvenavn-whiteish"
+  >
+    <!-- Knap der styrer accordionens åbning/lukning -->
+    <button
+      id="controlsAccordionItemOne"
+      type="button"
+      class="text-p flex w-full items-center justify-between bg-farvenavn-whiteish p-6 text-left"
+      aria-controls="accordionItemOne"
+      @click="isExpanded = ! isExpanded"
+      :aria-expanded="isExpanded ? 'true' : 'false'"
+    >
+      <!-- Tekst på knappen -->
+      Hvordan afmelder jeg mit abonnement?
+
+      <!-- Ikon (pil), der roterer, når accordion åbnes -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke-width="2"
+        stroke="currentColor"
+        class="size-5 shrink-0 transition"
+        aria-hidden="true"
+        :class="isExpanded  ?  'rotate-180'  :  ''"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+      </svg>
+    </button>
+
+    <!-- Indhold der vises/skjules baseret på "isExpanded" -->
+    <div
+      x-cloak
+      x-show="isExpanded"
+      id="accordionItemOne"
+      role="region"
+      aria-labelledby="controlsAccordionItemOne"
+      x-collapse
+    >
+      <div class="p-6 text-p_genre font-light w-[80%]">
+        Du kan nemt afmelde dit abonnement via din konto på vores hjemmeside.
+        Ingen bindingsperiode – du kan stoppe, når det passer dig.
+      </div>
+    </div>
+  </div>
+</div>

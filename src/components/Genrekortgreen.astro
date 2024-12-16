@@ -9,14 +9,14 @@ const { genrenavn, text1, text2, forfatter1, titel1, titel2, forfatter2 } =
   w-auto
   rounded-[60px] flex flex-col justify-center p-8"
 >
-  <h5 class="text-center font-serif text-4xl font-bold py-3">{genrenavn}</h5>
-  <p class="text-center font-light p-2">{text1}</p>
-  <p class="text-center font-light p-2">{text2}</p>
-  <h6
-    class="text-center font-serif text-farvenavn-primary font-bold text-xl p-2"
+  <h4 class="text-center font-serif text-h4 font-bold py-3">{genrenavn}</h4>
+  <p class="text-center font-light p-2 text-p_genre">{text1}</p>
+  <p class="text-center font-light p-2 text-p_genre">{text2}</p>
+  <h5
+    class="text-center font-serif text-farvenavn-primary font-bold text-h5 p-2"
   >
     Tidligere valg
-  </h6>
+  </h5>
   <div class="flex">
     <article class="flex flex-col m-4">
       <slot name="one" /><div class="text-center">

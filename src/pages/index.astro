@@ -4,6 +4,7 @@ import Button from "../components/Button.astro";
 import Howto from "../components/Howto.astro";
 import Abonnement from "../components/Abonnement.astro";
 import Genre from "../components/Genre.astro";
+import Faq from "../components/Faq.astro";
 ---
 
 <MainLayout title="Readly">
@@ -16,14 +17,14 @@ import Genre from "../components/Genre.astro";
         <span class="font-light italic">MINDRE BESVÆR</span>
       </h1>
       <p
-        class="mt-10 flex items-baseline justify-center leading-tight font-light italic text-2xl"
+        class="mt-10 flex items-baseline justify-center leading-snug font-light italic text-storp"
       >
         Med <span
           class="text-farvenavn-primary font-serif font-bold italic text-5xl tracking-[-0.07em] mx-1"
           >Readly</span
         > får du håndplukkede bøger leveret lige til din dør.
       </p>
-      <p class="flex justify-center leading-tight font-light italic text-2xl">
+      <p class="flex justify-center leading-tight font-light italic text-storp">
         Vælg din yndlingsgenre eller prøv noget nyt med vores Surprisebox!
       </p>
       <div class="mt-6 flex justify-center">
@@ -66,13 +67,27 @@ import Genre from "../components/Genre.astro";
         />
         <Abonnement
           titel="Surprisebox"
-          skriv="Er du klar til at udforske noget nyt?"
-          text={`Surprisebox sender dig månedens bedste bog - fra en genre, du måske aldrig har prøvet før. `}
+          skriv="Er du klar til at udforske noget nyt litterært?"
+          text={`Surprisebox sender dig månedens bedste bog - fra en genre, du muligvis aldrig har prøvet før. `}
           text2="Perfekt til den nysgerrige læser."
         />
       </div>
-      <div class="mt-20"><Genre /></div>
+      <div class="mt-32">
+        <h3
+          class="text-h3 font-serif text-center font-bold text-farvenavn-blackish pb-10"
+        >
+          GENRE
+        </h3><Genre />
+      </div>
     </section>
     <img src="/btmborder.svg" alt="" class="mt-[-1px]" />
+  </section>
+  <section class="my-20 mx-60 flex flex-col justify-content">
+    <h3
+      class="text-h3 font-serif text-center font-bold text-farvenavn-whiteish pb-10"
+    >
+      FAQ
+    </h3>
+    <Faq />
   </section>
 </MainLayout>

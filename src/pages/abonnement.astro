@@ -4,5 +4,77 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Om Readly">
-  <div></div>
+  <div>
+    <div
+      class="max-w-4xl mx-auto mt-10 p-5 bg-white shadow rounded-lg"
+      x-data="{ step: 1, abonnement: '', genre: '' }"
+    >
+      <!-- Step 1: Vælg Abonnement -->
+      <div x-show="step === 1">
+        <h1 class="text-2xl font-bold mb-5">Vælg Abonnement</h1>
+        <div class="flex gap-5">
+          <button
+            @click="abonnement = 'Genre'; step = 2"
+            class="w-1/2 p-5 bg-green-200 rounded-lg text-center font-bold text-lg hover:bg-green-300"
+          >
+            Genre
+          </button>
+          <button
+            @click="abonnement = 'Surprise'; step = 2"
+            class="w-1/2 p-5 bg-green-200 rounded-lg text-center font-bold text-lg hover:bg-green-300"
+          >
+            Surprise
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2: Vælg Genre -->
+      <div x-show="step === 2">
+        <h1 class="text-2xl font-bold mb-5">Vælg Genre</h1>
+        <div class="flex flex-col gap-3">
+          <button
+            @click="genre = 'Romantik'; step = 3"
+            class="p-3 bg-gray-200 rounded hover:bg-green-200">Romantik</button
+          >
+          <button
+            @click="genre = 'Krimi'; step = 3"
+            class="p-3 bg-gray-200 rounded hover:bg-green-200">Krimi</button
+          >
+          <button
+            @click="genre = 'Fiktion'; step = 3"
+            class="p-3 bg-gray-200 rounded hover:bg-green-200">Fiktion</button
+          >
+        </div>
+      </div>
+
+      <!-- Step 3: Oversigt -->
+      <div x-show="step === 3">
+        <h1 class="text-2xl font-bold mb-5">Din Oversigt</h1>
+        <div class="p-5 bg-gray-50 rounded-lg shadow-md">
+          <p class="mb-3">
+            <strong>Abonnement:</strong>
+            <span x-text="abonnement"></span>
+          </p>
+          <p><strong>Genre:</strong> <span x-text="genre"></span></p>
+        </div>
+        <button
+          @click="step = 4"
+          class="mt-5 bg-blue-500 text-white px-5 py-2 rounded hover:bg-blue-600"
+          >Gå til Betaling</button
+        >
+      </div>
+
+      <!-- Step 4: Betaling -->
+      <div x-show="step === 4">
+        <h1 class="text-2xl font-bold mb-5">Betaling</h1>
+        <div class="p-5 bg-gray-50 rounded-lg">
+          <p class="text-lg mb-3">Din ordre er klar til betaling.</p>
+          <button
+            class="bg-green-500 text-white px-5 py-2 rounded hover:bg-green-600"
+            >Køb</button
+          >
+        </div>
+      </div>
+    </div>
+  </div>
 </MainLayout>
