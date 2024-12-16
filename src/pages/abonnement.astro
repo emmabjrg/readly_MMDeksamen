@@ -16,7 +16,7 @@ import Buttontwo from "../components/Buttontwo.astro";
     <!-- Wrapper med Alpine.js -->
     <section class="bg-farvenavn-whiteish p-0 m-0">
       <div
-        class="max-w-4xl mx-auto px-5 py-10 rounded-lg"
+        class="max-w-4xl mx-auto px-5 py-2 rounded-lg"
         x-data="{ step: 1, abonnement: '', genre: '' }"
       >
         <!-- Step 1: Vælg Abonnement -->
@@ -124,9 +124,8 @@ import Buttontwo from "../components/Buttontwo.astro";
           </div>
           <div class="flex justify-center gap-4">
             <Button text="Annuller" />
-            <button @click="step = 4">
-              <Buttontwo text="Gå til betaling" />
-            </button>
+
+            <Buttontwo text="Gå til betaling" />
           </div>
         </div>
 
