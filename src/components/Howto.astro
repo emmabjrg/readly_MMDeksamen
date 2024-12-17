@@ -2,7 +2,13 @@
 const { text, titel } = Astro.props;
 ---
 
-<div class="flex flex-col justify-center text-center text-farvenavn-whiteish">
-  <h2 class="font-serif text-h4 font-bold">{titel}</h2>
-  <p class="font-light mt-6 text-p_genre leading-relaxed">{text}</p>
+<div
+  class="flex flex-col justify-center items-center text-center text-farvenavn-whiteish"
+>
+  <h2 class="font-serif text-mobile_h4 lg:text-h4 font-bold">{titel}</h2>
+  <p
+    class="font-light mt-2 lg:mt-6 text-mobile_p_genre text-p_genre leading-relaxed"
+  >
+    {text}
+  </p>
 </div>

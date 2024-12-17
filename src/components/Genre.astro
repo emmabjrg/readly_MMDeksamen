@@ -3,11 +3,14 @@ import Genrekortgreen from "../components/Genrekortgreen.astro";
 import Genrekortblue from "../components/Genrekortblue.astro";
 ---
 
-<div class="w-full relative p-10">
-  <div class="swiper centered-slide-carousel swiper-container relative">
+<div class="w-full relative p-4 md:p-10">
+  <!-- Responsiv padding -->
+  <!-- Swiper container -->
+  <div class="swiper centered-slide-carousel relative">
+    <!-- Swiper Wrapper -->
     <div class="swiper-wrapper">
       <!-- bio genrekort -->
-      <div class="swiper-slide w-[300px] shrink-0 mr-5">
+      <div class="swiper-slide w-full sm:w-[300px] shrink-0">
         <Genrekortgreen
           genrenavn="Biografi & non-fiction"
           text1="Fordyb dig i virkelighedens facinerende fortællinger, inspirerende livshistorier og opdag en masse ny og spændende fakta og viden."
@@ -16,17 +19,18 @@ import Genrekortblue from "../components/Genrekortblue.astro";
           forfatter1="Tara Westover"
           titel2="Storm På Vej"
           forfatter2="Steffen Kretz"
-          ><img
+        >
+          <img
             slot="one"
             src="/books/bio_oplyst.webp"
             alt=""
-            class="rounded-xl"
+            class="rounded-xl w-full"
           />
           <img
             slot="two"
             src="/books/bio_storm.webp"
             alt=""
-            class="rounded-xl"
+            class="rounded-xl w-full"
           />
         </Genrekortgreen>
       </div>
@@ -181,6 +185,15 @@ import Genrekortblue from "../components/Genrekortblue.astro";
     background-color: #565cff; /* Aktive dot */
     transform: scale(1.2); /* Gør den aktive prik større */
   }
+
+  @media (min-width: 1024px) {
+    img {
+      width: 8vw;
+    }
+  }
+  img {
+    width: 20vw;
+  }
 </style>
 
 <!-- Swiper Styles og Scripts -->
@@ -193,25 +206,30 @@ import Genrekortblue from "../components/Genrekortblue.astro";
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var swiper = new Swiper(".centered-slide-carousel", {
-      centeredSlides: true,
-      loop: true,
-      spaceBetween: 20,
-      slidesPerView: 3, // Viser 3 kort ad gangen
+      loop: true, // Gør swipen uendelig
+      centeredSlides: true, // Centrerer det aktive slide
+      spaceBetween: 16, // Spacing mellem kortene
+
       breakpoints: {
-        1280: {
-          slidesPerView: 3, // Desktop
+        320: {
+          slidesPerView: 1.2, // Viser 1.2 kort på små skærme
+          spaceBetween: 10, // Reduceret spacing
+        },
+        640: {
+          slidesPerView: 2, // Viser 2 kort på mellem skærme
+          spaceBetween: 20,
         },
         1024: {
-          slidesPerView: 2, // Tablets
-        },
-        768: {
-          slidesPerView: 1, // Mobile
+          slidesPerView: 3, // Viser 3 kort på større skærme
+          spaceBetween: 30,
         },
       },
       pagination: {
         el: ".swiper-pagination",
-        clickable: true,
+        clickable: true, // Gør dots klikbare
       },
+      grabCursor: true, // Gør det muligt at "trække" med cursor
+      draggable: true, // Aktiverer drag/swipe for mobil
     });
   });
 </script>

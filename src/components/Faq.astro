@@ -3,7 +3,7 @@
 ---
 
 <!-- accordion ting -->
-<div class="flex w-full flex-col gap-6 text-farvenavn-blackish">
+<div class="flex w-full flex-col lg:gap-6 gap-4 text-farvenavn-blackish">
   <!-- spørgsmål 1 -->
   <div
     x-data="{ isExpanded: false }"
@@ -13,7 +13,7 @@
     <button
       id="controlsAccordionItemOne"
       type="button"
-      class="text-p flex w-full items-center justify-between bg-farvenavn-whiteish p-6 text-left"
+      class="lg:text-p text-mobile_p flex w-full items-center justify-between bg-farvenavn-whiteish p-6 text-left"
       aria-controls="accordionItemOne"
       @click="isExpanded = ! isExpanded"
       :aria-expanded="isExpanded ? 'true' : 'false'"
@@ -47,7 +47,9 @@
       aria-labelledby="controlsAccordionItemOne"
       x-collapse
     >
-      <div class="p-6 text-p_genre font-light w-[80%]">
+      <div
+        class="p-6 lg:text-p_genre text-mobile_p_genre font-light w-[96%] lg:w-[80%]"
+      >
         Readly er en bogabonnementstjeneste, hvor du kan vælge din yndlingsgenre
         eller lade os overraske dig med vores Surprisebox. Vi leverer
         håndplukkede bøger direkte til din dør hver måned. Du skal bare læne dig
@@ -65,7 +67,7 @@
     <button
       id="controlsAccordionItemOne"
       type="button"
-      class="text-p flex w-full items-center justify-between bg-farvenavn-whiteish p-6 text-left"
+      class="lg:text-p text-mobile_p flex w-full items-center justify-between bg-farvenavn-whiteish p-6 text-left"
       aria-controls="accordionItemOne"
       @click="isExpanded = ! isExpanded"
       :aria-expanded="isExpanded ? 'true' : 'false'"
@@ -100,7 +102,9 @@
       aria-labelledby="controlsAccordionItemOne"
       x-collapse
     >
-      <div class="p-6 text-p_genre font-light w-[80%]">
+      <div
+        class="p-6 lg:text-p_genre text-mobile_p_genre font-light w-[96%] lg:w-[80%]"
+      >
         Ja! Du kan altid skifte din genre efter 3 måneder, så din læseoplevelse
         passer til dine ønsker. Hvis du har valgt Surprisebox, kan du ændre til
         en specifik genre, når du ønsker det.
@@ -117,7 +121,7 @@
     <button
       id="controlsAccordionItemOne"
       type="button"
-      class="text-p flex w-full items-center justify-between bg-farvenavn-whiteish p-6 text-left"
+      class="lg:text-p text-mobile_p flex w-full items-center justify-between bg-farvenavn-whiteish p-6 text-left"
       aria-controls="accordionItemOne"
       @click="isExpanded = ! isExpanded"
       :aria-expanded="isExpanded ? 'true' : 'false'"
@@ -152,7 +156,9 @@
       aria-labelledby="controlsAccordionItemOne"
       x-collapse
     >
-      <div class="p-6 text-p_genre font-light w-[80%]">
+      <div
+        class="p-6 lg:text-p_genre text-mobile_p_genre font-light w-[96%] lg:w-[80%]"
+      >
         Det sker sjældent, da vi nøje udvælger bøger baseret på dine præferencer
         og nye udgivelser. Hvis det sker, kan du kontakte os, så finder vi en
         løsning - fx en erstatningsbog.
@@ -169,7 +175,7 @@
     <button
       id="controlsAccordionItemOne"
       type="button"
-      class="text-p flex w-full items-center justify-between bg-farvenavn-whiteish p-6 text-left"
+      class="lg:text-p text-mobile_p flex w-full items-center justify-between bg-farvenavn-whiteish p-6 text-left"
       aria-controls="accordionItemOne"
       @click="isExpanded = ! isExpanded"
       :aria-expanded="isExpanded ? 'true' : 'false'"
@@ -204,7 +210,9 @@
       aria-labelledby="controlsAccordionItemOne"
       x-collapse
     >
-      <div class="p-6 text-p_genre font-light w-[80%]">
+      <div
+        class="p-6 lg:text-p_genre text-mobile_p_genre font-light w-[96%] lg:w-[80%]"
+      >
         Du kan nemt afmelde dit abonnement via din konto på vores hjemmeside.
         Ingen bindingsperiode – du kan stoppe, når det passer dig.
       </div>

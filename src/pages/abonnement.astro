@@ -106,25 +106,30 @@ import Buttontwo from "../components/Buttontwo.astro";
             Din oversigt
           </h3>
           <div
-            class="py-16 bg-farvenavn-primary rounded-[60px] border border-farvenavn-blackish flex justify-around items-center p-14 text-farvenavn-whiteish"
+            class="py-16 bg-[#E9FDD9] rounded-[60px] border border-farvenavn-blackish flex justify-around items-center p-14 text-farvenavn-blackish"
           >
-            <img src="/preloader.svg" alt="" class="w-[40%]" />
+            <img src="/logo.svg" alt="" class="w-[40%]" />
             <div class="">
               <p class="mb-4">
-                <span class="font-bold font-serif uppercase italic"
+                <span
+                  class="font-bold text-farvenavn-primary font-serif uppercase italic"
                   >Abonnement:</span
                 >
                 <br />
                 <span class="font-light text-p" x-text="abonnement"></span>
               </p>
               <p class="mb-4">
-                <span class="font-bold font-serif uppercase italic">Genre:</span
+                <span
+                  class="font-bold font-serif uppercase italic text-farvenavn-primary"
+                  >Genre:</span
                 >
                 <br />
                 <span class="font-light text-p" x-text="genre"></span>
               </p>
               <p class="">
-                <span class="font-bold font-serif uppercase italic">Pris:</span
+                <span
+                  class="font-bold font-serif uppercase italic text-farvenavn-primary"
+                  >Pris:</span
                 ><br />
                 <span class="font-light text-p"> 150,- om måneden.</span>
               </p>
@@ -157,7 +162,7 @@ import Buttontwo from "../components/Buttontwo.astro";
                 <div>
                   <!-- Overskrift for Leveringsadresse -->
                   <h3
-                    class="text-storp font-medium text-farvenavn-blackish mb-4"
+                    class="text-storp font-serif font-bold text-farvenavn-blackish mb-4"
                   >
                     Leveringsadresse <!-- Tidligere 'Billing Address', nu ændret -->
                   </h3>
@@ -275,7 +280,7 @@ import Buttontwo from "../components/Buttontwo.astro";
                 <div>
                   <!-- Overskrift for betalingssektionen -->
                   <h3
-                    class="text-storp font-medium text-farvenavn-blackish mb-4"
+                    class="text-storp font-serif font-bold text-farvenavn-blackish mb-4"
                   >
                     Betaling <!-- Tidligere 'Payment' -->
                   </h3>

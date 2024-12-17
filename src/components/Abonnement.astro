@@ -4,26 +4,26 @@ const { titel, skriv, text, text2 } = Astro.props;
 ---
 
 <div
-  class="bg-farvenavn-primary border border-farvenavn-blackish w-[38%] rounded-[60px] py-10 px-10"
+  class="bg-farvenavn-primary border border-farvenavn-blackish lg:w-[38%] w-full rounded-[60px] py-10 px-4 lg:px-10"
 >
   <div class="flex flex-col justify-center">
     <h3
-      class="text-farvenavn-whiteish font-serif text-h3 font-bold italic uppercase pb-4 text-center"
+      class="text-farvenavn-whiteish font-serif lg:text-h3 text-mobile_h3 font-bold italic uppercase pb-4 text-center"
     >
       {titel}
     </h3>
     <p
-      class="text-farvenavn-whiteish font-light text-center px-10 py-3 text-p italic"
+      class="text-farvenavn-whiteish font-light text-center lg:px-10 px-4 py-3 text-mobile_p lg:text-p italic"
     >
       {skriv}
     </p>
     <p
-      class="text-farvenavn-whiteish font-light text-center px-10 py-3 text-p leading-relaxed"
+      class="text-farvenavn-whiteish font-light text-center lg:px-10 px-4 py-3 text-mobile_p lg:text-p leading-relaxed"
     >
       {text}
     </p>
     <p
-      class="text-farvenavn-whiteish font-light text-center px-10 py-3 mb-8 text-p"
+      class="text-farvenavn-whiteish font-light text-center lg:px-10 px-4 py-3 text-mobile_p lg:text-p mb-8"
     >
       {text2}
     </p>
