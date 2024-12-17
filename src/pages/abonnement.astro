@@ -6,12 +6,7 @@ import Buttontwo from "../components/Buttontwo.astro";
 
 <MainLayout title="Om Readly">
   <div>
-    <h2
-      class="text-h2 md:text-h2 font-bold font-serif text-farvenavn-whiteish uppercase my-20 text-center"
-    >
-      Vælg Abonnement
-    </h2>
-    <img src="/topborder.svg" alt="" class="mb-[-1px] w-screen" />
+    <img src="/topborder.svg" alt="" class="mt-20 mb-[-1px] w-screen" />
 
     <!-- Wrapper med Alpine.js -->
     <section class="bg-farvenavn-whiteish p-0 m-0">
@@ -21,9 +16,11 @@ import Buttontwo from "../components/Buttontwo.astro";
       >
         <!-- Step 1: Vælg Abonnement -->
         <div x-show="step === 1" class="space-y-6">
-          <h4 class="text-h4 text-center pb-10 font-light">
-            Hvilket abonnement?
-          </h4>
+          <h3
+            class="text-h3 font-bold font-serif uppercase text-center pb-4 w-full"
+          >
+            Vælg abonnement
+          </h3>
 
           <div class="flex flex-col md:flex-row gap-6">
             <button
@@ -54,7 +51,11 @@ import Buttontwo from "../components/Buttontwo.astro";
 
         <!-- Step 2: Vælg Genre -->
         <div x-show="step === 2" class="space-y-6">
-          <h4 class="text-h4 text-center pb-10 font-light">Hvilken genre?</h4>
+          <h3
+            class="text-h3 font-bold font-serif uppercase text-center pb-4 w-full"
+          >
+            Hvilken genre?
+          </h3>
           <div class="flex flex-col gap-4">
             <button
               @click="genre = 'Biografier & Non-fiktion'; step = 3"
@@ -99,28 +100,35 @@ import Buttontwo from "../components/Buttontwo.astro";
 
         <!-- Step 3: Oversigt -->
         <div x-show="step === 3" class="space-y-6">
-          <h4 class="text-h4 text-center pb-10 font-light">Din oversigt</h4>
-          <div
-            class="py-16 bg-farvenavn-primary rounded-[60px] border border-farvenavn-blackish flex flex-col justify-center items-center p-14 text-farvenavn-whiteish"
+          <h3
+            class="text-h3 font-bold font-serif uppercase text-center pb-4 w-full"
           >
-            <img src="/preloader.svg" alt="" class="w-[40%] pb-6" />
-            <p class="mb-4 text-center">
-              <span class="font-bold font-serif uppercase italic"
-                >Abonnement:</span
-              >
-              <br />
-              <span class="font-light text-p" x-text="abonnement"></span>
-            </p>
-            <p class="mb-4 text-center">
-              <span class="font-bold font-serif uppercase italic">Genre:</span>
-              <br />
-              <span class="font-light text-p" x-text="genre"></span>
-            </p>
-            <p class="text-center">
-              <span class="font-bold font-serif uppercase italic">Pris:</span
-              ><br />
-              <span class="font-light text-p"> 150,- om måneden.</span>
-            </p>
+            Din oversigt
+          </h3>
+          <div
+            class="py-16 bg-farvenavn-primary rounded-[60px] border border-farvenavn-blackish flex justify-around items-center p-14 text-farvenavn-whiteish"
+          >
+            <img src="/preloader.svg" alt="" class="w-[40%]" />
+            <div class="">
+              <p class="mb-4">
+                <span class="font-bold font-serif uppercase italic"
+                  >Abonnement:</span
+                >
+                <br />
+                <span class="font-light text-p" x-text="abonnement"></span>
+              </p>
+              <p class="mb-4">
+                <span class="font-bold font-serif uppercase italic">Genre:</span
+                >
+                <br />
+                <span class="font-light text-p" x-text="genre"></span>
+              </p>
+              <p class="">
+                <span class="font-bold font-serif uppercase italic">Pris:</span
+                ><br />
+                <span class="font-light text-p"> 150,- om måneden.</span>
+              </p>
+            </div>
           </div>
           <div class="flex justify-center gap-4">
             <Button text="Annuller" />
@@ -131,18 +139,252 @@ import Buttontwo from "../components/Buttontwo.astro";
 
         <!-- Step 4: Betaling -->
         <div x-show="step === 4" class="space-y-6">
-          <h3 class="text-2xl font-semibold text-center">Betaling</h3>
-          <div class="p-5 bg-gray-50 rounded-lg text-center">
-            <p class="text-lg mb-3">Din ordre er klar til betaling.</p>
-            <button
-              class="bg-green-500 text-white px-5 py-2 rounded hover:bg-green-600"
+          <h3
+            class="text-h3 font-bold font-serif uppercase text-center pb-4 w-full"
+          >
+            Bestil abonnemnet
+          </h3>
+          <!-- Container, der centrerer hele formularen på siden -->
+          <div class="container mx-auto mt-10">
+            <!-- Formularen -->
+            <form
+              action="#"
+              class="max-w-xl mx-auto bg-[#E9FDD9] p-8 rounded-[40px] border border-farvenavn-blackish"
             >
-              Køb
-            </button>
+              <!-- Formularlayout opdelt i to kolonner ved hjælp af grid -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Kolonne 1: Leveringsadresse -->
+                <div>
+                  <!-- Overskrift for Leveringsadresse -->
+                  <h3
+                    class="text-storp font-medium text-farvenavn-blackish mb-4"
+                  >
+                    Leveringsadresse <!-- Tidligere 'Billing Address', nu ændret -->
+                  </h3>
+
+                  <!-- Fulde navn inputfelt -->
+                  <div class="mb-4">
+                    <label
+                      for="name"
+                      class="block text-p_genre font-light text-farvenavn-blackish"
+                    >
+                      Fulde Navn: <!-- Beskrivelsen af inputfelt -->
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="Indtast dit fulde navn"
+                      required
+                      class="mt-1 bg-[#F7FEF2] block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
+                                  focus:ring-farvenavn-primary focus:border-farvenavn-primary"
+                    />
+                  </div>
+
+                  <!-- Email inputfelt -->
+                  <div class="mb-4">
+                    <label
+                      for="email"
+                      class="block text-p_genre font-light text-farvenavn-blackish"
+                    >
+                      Email:
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="Indtast din e-mail"
+                      required
+                      class="mt-1 bg-[#F7FEF2] block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
+                                  focus:ring-farvenavn-primary focus:border-farvenavn-primary"
+                    />
+                  </div>
+
+                  <!-- Adresse inputfelt -->
+                  <div class="mb-4">
+                    <label
+                      for="address"
+                      class="block text-p_genre font-light text-farvenavn-blackish"
+                    >
+                      Adresse:
+                    </label>
+                    <input
+                      type="text"
+                      id="address"
+                      placeholder="Indtast din adresse"
+                      required
+                      class="mt-1 bg-[#F7FEF2] block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
+                                  focus:ring-farvenavn-primary focus:border-farvenavn-primary"
+                    />
+                  </div>
+
+                  <!-- By inputfelt -->
+                  <div class="mb-4">
+                    <label
+                      for="city"
+                      class="block text-p_genre font-light text-farvenavn-blackish"
+                    >
+                      By:
+                    </label>
+                    <input
+                      type="text"
+                      id="city"
+                      placeholder="Indtast din by"
+                      required
+                      class="mt-1 bg-[#F7FEF2] block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
+                                  focus:ring-farvenavn-primary focus:border-farvenavn-primary"
+                    />
+                  </div>
+
+                  <!-- Stat inputfelt -->
+                  <div class="mb-4">
+                    <label
+                      for="state"
+                      class="block text-p_genre font-light text-farvenavn-blackish"
+                    >
+                      Stat:
+                    </label>
+                    <input
+                      type="text"
+                      id="state"
+                      placeholder="Indtast din stat"
+                      required
+                      class="mt-1 bg-[#F7FEF2] block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
+                                  focus:ring-farvenavn-primary focus:border-farvenavn-primary"
+                    />
+                  </div>
+
+                  <!-- Postnummer inputfelt -->
+                  <div class="mb-4">
+                    <label
+                      for="zip"
+                      class="block text-p_genre font-light text-farvenavn-blackish"
+                    >
+                      Postnummer:
+                    </label>
+                    <input
+                      type="text"
+                      id="zip"
+                      placeholder="Indtast dit postnummer"
+                      required
+                      class="mt-1 bg-[#F7FEF2] block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
+                                  focus:ring-farvenavn-primary focus:border-farvenavn-primary"
+                    />
+                  </div>
+                </div>
+
+                <!-- Kolonne 2: Betalingsoplysninger -->
+                <div>
+                  <!-- Overskrift for betalingssektionen -->
+                  <h3
+                    class="text-storp font-medium text-farvenavn-blackish mb-4"
+                  >
+                    Betaling <!-- Tidligere 'Payment' -->
+                  </h3>
+
+                  <!-- Kortindehaverens navn inputfelt -->
+                  <div class="mb-4">
+                    <label
+                      for="cardName"
+                      class="block text-p_genre font-light text-farvenavn-blackish"
+                    >
+                      Navn på kortet:
+                    </label>
+                    <input
+                      type="text"
+                      id="cardName"
+                      placeholder="Indtast kortindehaverens navn"
+                      required
+                      class="mt-1 bg-[#F7FEF2] block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
+                                  focus:ring-farvenavn-primary focus:border-farvenavn-primary"
+                    />
+                  </div>
+
+                  <!-- Kreditkortnummer inputfelt -->
+                  <div class="mb-4">
+                    <label
+                      for="cardNumber"
+                      class="block text-p_genre font-light text-farvenavn-blackish"
+                    >
+                      Kreditkortnummer:
+                    </label>
+                    <input
+                      type="text"
+                      id="cardNumber"
+                      placeholder="Indtast kortnummer"
+                      required
+                      class="mt-1 bg-[#F7FEF2] block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
+                                  focus:ring-farvenavn-primary focus:border-farvenavn-primary"
+                    />
+                  </div>
+
+                  <!-- Udløbsmåned og udløbsår -->
+                  <div class="flex justify-between mb-4">
+                    <!-- Udløbsmåned -->
+                    <div class="w-1/2 mr-2">
+                      <label
+                        for="expMonth"
+                        class="block text-p_genre font-light text-farvenavn-blackish"
+                      >
+                        Udløbsmåned:
+                      </label>
+                      <input
+                        type="text"
+                        id="expMonth"
+                        placeholder="MM"
+                        required
+                        class="mt-1 bg-[#F7FEF2] block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
+                                  focus:ring-farvenavn-primary focus:border-farvenavn-primary"
+                      />
+                    </div>
+                    <!-- Udløbsår -->
+                    <div class="w-1/2 ml-2">
+                      <label
+                        for="expYear"
+                        class="block text-p_genre font-light text-farvenavn-blackish"
+                      >
+                        Udløbsår:
+                      </label>
+                      <input
+                        type="text"
+                        id="expYear"
+                        placeholder="YYYY"
+                        required
+                        class="mt-1 bg-[#F7FEF2] block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
+                                  focus:ring-farvenavn-primary focus:border-farvenavn-primary"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- CVV inputfelt -->
+                  <div class="mb-4">
+                    <label
+                      for="cvv"
+                      class="block text-p_genre font-light text-farvenavn-blackish"
+                    >
+                      CVV:
+                    </label>
+                    <input
+                      type="text"
+                      id="cvv"
+                      placeholder="Indtast CVV"
+                      required
+                      class="mt-1 bg-[#F7FEF2] block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
+                                  focus:ring-farvenavn-primary focus:border-farvenavn-primary"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Knap til at indsende formularen -->
+              <div class="flex justify-between pt-4">
+                <Button text="Annuller" />
+                <Buttontwo text="Køb abonnement" />
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </section>
+    <img src="
+                btmborder.svg" alt="" class="mt-[-1px] mb-20" />
   </div>
-  <img src="/btmborder.svg" alt="" class="mt-[-1px] mb-20" />
 </MainLayout>
