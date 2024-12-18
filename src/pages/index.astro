@@ -84,7 +84,7 @@ import Faq from "../components/Faq.astro";
     <img src="/topborder.svg" alt="" class="mb-[-1px] w-full" />
     <section class="bg-farvenavn-whiteish lg:pt-0 pt-6">
       <h3
-        class="text-h3 font-serif uppercase text-center font-bold text-farvenavn-blackish pb-10"
+        class="text-mobile_h3 lg:text-h3 font-serif uppercase text-center font-bold text-farvenavn-blackish pb-10"
       >
         Abonnementer
       </h3>
@@ -107,7 +107,7 @@ import Faq from "../components/Faq.astro";
       </div>
       <div class="mt-28">
         <h3
-          class="text-h3 font-serif text-center font-bold text-farvenavn-blackish pb-10"
+          class="text-mobile_h3 lg:text-h3 font-serif text-center font-bold text-farvenavn-blackish pb-10"
         >
           GENRE
         </h3><Genre />
@@ -117,10 +117,25 @@ import Faq from "../components/Faq.astro";
   </section>
   <section class="lg:my-20 my-10 lg:mx-60 mx-10 flex flex-col justify-content">
     <h3
-      class="text-h3 font-serif text-center font-bold text-farvenavn-whiteish pb-10"
+      class="text-mobile_h3 lg:text-h3 font-serif text-center font-bold text-farvenavn-whiteish pb-10"
     >
       FAQ
     </h3>
     <Faq />
   </section>
+  <style>
+    /*--------------- face-in effekten!!!!!!!! ----------------*/
+    .fade-in {
+      filter: opacity(0) !important;
+      transform: translateX(70px);
+      transition:
+        filter 2s ease,
+        transform 2s ease;
+    }
+
+    .in-view {
+      filter: opacity(1) !important;
+      transform: translateX(0);
+    }
+  </style>
 </MainLayout>
