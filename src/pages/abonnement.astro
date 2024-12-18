@@ -4,8 +4,23 @@ import Button from "../components/Button.astro";
 import Buttontwo from "../components/Buttontwo.astro";
 ---
 
-<MainLayout title="Om Readly">
-  <div>
+<style>
+  /*--------------- face-in effekten!!!!!!!! ----------------*/
+  .fade-in {
+    filter: opacity(0) !important;
+    transform: translatey(70px);
+    transition:
+      filter 2s ease,
+      transform 2s ease;
+  }
+
+  .in-view {
+    filter: opacity(1) !important;
+    transform: translateX(0);
+  }
+</style>
+<MainLayout title="Abonnement">
+  <div class="fade-in">
     <img src="/topborder.svg" alt="" class="mt-20 mb-[-1px] w-[100vw]" />
 
     <!-- Wrapper med Alpine.js -->
