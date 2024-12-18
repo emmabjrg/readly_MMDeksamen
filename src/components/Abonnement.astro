@@ -4,7 +4,7 @@ const { titel, skriv, text, text2 } = Astro.props;
 ---
 
 <div
-  class="bg-farvenavn-primary border border-farvenavn-blackish lg:w-[38%] w-full rounded-[60px] py-10 px-4 lg:px-10"
+  class="bg-farvenavn-primary border border-farvenavn-blackish lg:w-[40%] w-full rounded-[60px] py-10 px-4 lg:px-10"
 >
   <div class="flex flex-col justify-center">
     <h3
@@ -32,6 +32,6 @@ const { titel, skriv, text, text2 } = Astro.props;
     >
       <span class="font-bold not-italic text-6xl">150,-</span> / måneden.
     </p>
-    <Button text="Læs mere" />
+    <a href="/genrebox" class="self-center"><Button text="Læs mere" /></a>
   </div>
 </div>

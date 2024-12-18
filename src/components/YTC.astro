@@ -1,0 +1,17 @@
+---
+import Button from "./Button.astro";
+const { text } = Astro.props;
+---
+
+<section class="flex justify-center p-20">
+  <div
+    class="border-dashed border-2 border-farvenavn-blackish rounded-[80px] lg:rounded-[140px] bg-farvenavn-whiteish lg:w-[83%] w-[90%] lg:p-12 p-10 flex flex-col justify-center items-center text-center"
+  >
+    <h4
+      class="fade-in font-serif lg:text-h4 text-mobile_h4 uppercase font-bold p-4"
+    >
+      ... {text} siden is yet to come ...
+    </h4>
+    <a href="/"><Button text="tilbage til forsiden" /> </a>
+  </div>
+</section>
