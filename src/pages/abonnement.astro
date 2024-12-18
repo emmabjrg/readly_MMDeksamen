@@ -59,6 +59,8 @@ import Buttontwo from "../components/Buttontwo.astro";
           >
             Hvilken genre?
           </h3>
+          <!-- div med buttons, hvor @click tilføjer den X til genre i step 3, og springer videre til næste step. -->
+
           <div class="flex flex-col gap-4">
             <button
               @click="genre = 'Biografier & Non-fiktion'; step = 3"
@@ -76,7 +78,7 @@ import Buttontwo from "../components/Buttontwo.astro";
               @click="genre = 'Historiske romaner'; step = 3"
               class="p-3 text-p font-serif transition font-medium bg-farvenavn-primary rounded-full hover:bg-farvenavn-blackish text-farvenavn-whiteish border border-farvenavn-blackish text-center"
             >
-              Historiske romaner
+              Historiske Romaner
             </button><button
               @click="genre = 'Fantasy & Sci-fi'; step = 3"
               class="p-3 text-p font-serif transition font-medium bg-farvenavn-primary rounded-full hover:bg-farvenavn-blackish text-farvenavn-whiteish border border-farvenavn-blackish text-center"
@@ -87,7 +89,7 @@ import Buttontwo from "../components/Buttontwo.astro";
               @click="genre = 'Romantiske romaner'; step = 3"
               class="p-3 text-p font-serif transition font-medium bg-farvenavn-primary rounded-full hover:bg-farvenavn-blackish text-farvenavn-whiteish border border-farvenavn-blackish text-center"
             >
-              Romantiske romaner
+              Romantiske Romaner
             </button>
             <button
               @click="genre = 'Krimi & Spænding'; step = 3"
@@ -97,7 +99,9 @@ import Buttontwo from "../components/Buttontwo.astro";
             </button>
           </div>
           <div class="flex justify-center">
-            <button @click="step = 1" class="font-light italic"
+            <button
+              @click="step = 1"
+              class="font-light italic transition hover:text-farvenavn-primary"
               >⟵ Tilbage</button
             >
 
@@ -144,7 +148,9 @@ import Buttontwo from "../components/Buttontwo.astro";
             </div>
           </div>
           <div class="flex justify-center">
-            <button @click="step = 2" class="font-light italic"
+            <button
+              @click="step = 2"
+              class="font-light italic transition hover:text-farvenavn-primary"
               >⟵ Tilbage</button
             >
 
@@ -162,31 +168,29 @@ import Buttontwo from "../components/Buttontwo.astro";
           >
             Bestil abonnemnet
           </h3>
-          <!-- Container, der centrerer hele formularen på siden -->
-          <div class="container mx-auto mt-10">
-            <!-- Formularen -->
+          <div class="mx-auto mt-10">
+            <!-- formularen til betaling + levering -->
             <form
               action="#"
               class="max-w-xl mx-auto bg-farvenavn-whiteish p-8 rounded-[40px] border border-farvenavn-blackish"
             >
-              <!-- Formularlayout opdelt i to kolonner ved hjælp af grid -->
+              <!-- layout - grid ...  -->
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Kolonne 1: Leveringsadresse -->
+                <!-- kol-1 leveringsadresse -->
                 <div>
-                  <!-- Overskrift for Leveringsadresse -->
                   <h3
                     class="text-storp font-serif font-bold text-farvenavn-blackish mb-4"
                   >
-                    Leveringsadresse <!-- Tidligere 'Billing Address', nu ændret -->
+                    Leveringsadresse
                   </h3>
 
-                  <!-- Fulde navn inputfelt -->
+                  <!-- navn -->
                   <div class="mb-4">
                     <label
                       for="name"
                       class="block text-p_genre font-light text-farvenavn-blackish"
                     >
-                      Fulde Navn: <!-- Beskrivelsen af inputfelt -->
+                      Fulde Navn:
                     </label>
                     <input
                       type="text"
@@ -197,7 +201,7 @@ import Buttontwo from "../components/Buttontwo.astro";
                     />
                   </div>
 
-                  <!-- Email inputfelt -->
+                  <!-- email -->
                   <div class="mb-4">
                     <label
                       for="email"
@@ -214,7 +218,7 @@ import Buttontwo from "../components/Buttontwo.astro";
                     />
                   </div>
 
-                  <!-- Adresse inputfelt -->
+                  <!-- adresse -->
                   <div class="mb-4">
                     <label
                       for="address"
@@ -231,7 +235,7 @@ import Buttontwo from "../components/Buttontwo.astro";
                     />
                   </div>
 
-                  <!-- By inputfelt -->
+                  <!-- by -->
                   <div class="mb-4">
                     <label
                       for="city"
@@ -248,7 +252,7 @@ import Buttontwo from "../components/Buttontwo.astro";
                     />
                   </div>
 
-                  <!-- Stat inputfelt -->
+                  <!-- stat -->
                   <div class="mb-4">
                     <label
                       for="state"
@@ -265,7 +269,7 @@ import Buttontwo from "../components/Buttontwo.astro";
                     />
                   </div>
 
-                  <!-- Postnummer inputfelt -->
+                  <!-- postnummer -->
                   <div class="mb-4">
                     <label
                       for="zip"
@@ -283,16 +287,15 @@ import Buttontwo from "../components/Buttontwo.astro";
                   </div>
                 </div>
 
-                <!-- Kolonne 2: Betalingsoplysninger -->
+                <!-- kol-2 betalingsoplysninger -->
                 <div>
-                  <!-- Overskrift for betalingssektionen -->
                   <h3
                     class="text-storp font-serif font-bold text-farvenavn-blackish mb-4"
                   >
-                    Betaling <!-- Tidligere 'Payment' -->
+                    Betaling
                   </h3>
 
-                  <!-- Kortindehaverens navn inputfelt -->
+                  <!-- navn på kort -->
                   <div class="mb-4">
                     <label
                       for="cardName"
@@ -309,7 +312,7 @@ import Buttontwo from "../components/Buttontwo.astro";
                     />
                   </div>
 
-                  <!-- Kreditkortnummer inputfelt -->
+                  <!-- kreditkortsnummer -->
                   <div class="mb-4">
                     <label
                       for="cardNumber"
@@ -326,9 +329,9 @@ import Buttontwo from "../components/Buttontwo.astro";
                     />
                   </div>
 
-                  <!-- Udløbsmåned og udløbsår -->
+                  <!-- udløb måned+år wrap flex -->
                   <div class="flex justify-between mb-4">
-                    <!-- Udløbsmåned -->
+                    <!-- udløbsmåned -->
                     <div class="w-1/2 mr-2">
                       <label
                         for="expMonth"
@@ -344,7 +347,7 @@ import Buttontwo from "../components/Buttontwo.astro";
                                   focus:ring-farvenavn-primary focus:border-farvenavn-primary"
                       />
                     </div>
-                    <!-- Udløbsår -->
+                    <!-- udløbsår -->
                     <div class="w-1/2 ml-2">
                       <label
                         for="expYear"
@@ -362,7 +365,7 @@ import Buttontwo from "../components/Buttontwo.astro";
                     </div>
                   </div>
 
-                  <!-- CVV inputfelt -->
+                  <!-- cvv-input -->
                   <div class="mb-4">
                     <label
                       for="cvv"
@@ -381,9 +384,11 @@ import Buttontwo from "../components/Buttontwo.astro";
                 </div>
               </div>
 
-              <!-- Knap til at indsende formularen -->
+              <!-- knapperne til at indsende formularen - eller annullere -->
               <div class="flex justify-center w-full">
-                <button @click="step = 3" class="font-light italic w-full"
+                <button
+                  @click="step = 3"
+                  class="font-light italic transition hover:text-farvenavn-primary"
                   >⟵ Tilbage</button
                 >
 
