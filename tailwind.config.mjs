@@ -33,7 +33,7 @@ export default {
                     mobile_h5: ["18px"],
                     mobile_p_genre: ["12px"],
                     mobile_p: ["18px"],
-                    mobile_storp: ["20px"],
+                    mobile_storp: ["3vw"],
                 },
         },
     },
