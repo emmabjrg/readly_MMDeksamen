@@ -4,38 +4,24 @@ import Button from "../components/Button.astro";
 import Buttontwo from "../components/Buttontwo.astro";
 ---
 
-<style>
-  /*--------------- face-in effekten!!!!!!!! ----------------*/
-  .fade-in {
-    filter: opacity(0) !important;
-    transform: translatey(70px);
-    transition:
-      filter 2s ease,
-      transform 2s ease;
-  }
-
-  .in-view {
-    filter: opacity(1) !important;
-    transform: translateX(0);
-  }
-</style>
 <MainLayout title="Abonnement">
-  <div class="">
+  <div class="fade-in">
     <img src="/topborder.svg" alt="" class="mt-20 mb-[-1px] w-[100vw]" />
 
-    <!-- Wrapper med Alpine.js -->
+    <!-- abonnement-vælger-flow-wrapper -->
     <section class="bg-farvenavn-whiteish p-0 m-0">
       <div
         class="max-w-4xl mx-auto px-5 py-2 rounded-lg"
         x-data="{ step: 1, abonnement: '', genre: '' }"
       >
-        <!-- Step 1: Vælg Abonnement -->
+        <!-- step1 - vælg abonnement -->
         <div x-show="step === 1" class="space-y-6">
           <h3
             class="fade-in font-serif lg:text-h3 text-[8vw] uppercase font-bold p-4 text-center"
           >
             Vælg abonnement
           </h3>
+          <!-- de to abonnementer som knapper - og ved klik fører de hhv til genrevalg og direkte til overblik (@click ... (ved klik skriv X som abonnement på step3, samt spring til step X når der klikkes)) -->
 
           <div class="flex flex-col md:flex-row gap-6">
             <button
@@ -59,12 +45,14 @@ import Buttontwo from "../components/Buttontwo.astro";
               >
             </button>
           </div>
-          <a href="/" class="flex justify-center p-8"
-            ><Button text="Annuller" /></a
-          >
+          <div class="flex justify-center">
+            <a href="/" class="flex justify-center p-8"
+              ><Button text="Annuller" /></a
+            >
+          </div>
         </div>
 
-        <!-- Step 2: Vælg Genre -->
+        <!-- step2 - genrebox -> vælg din genrepref -->
         <div x-show="step === 2" class="space-y-6">
           <h3
             class="fade-in font-serif lg:text-h3 text-[8vw] uppercase font-bold p-4 text-center"
@@ -108,12 +96,18 @@ import Buttontwo from "../components/Buttontwo.astro";
               Krimi & Spænding
             </button>
           </div>
-          <a href="/" class="flex justify-center p-8"
-            ><Button text="Annuller" /></a
-          >
+          <div class="flex justify-center">
+            <button @click="step = 1" class="font-light italic"
+              >⟵ Tilbage</button
+            >
+
+            <a href="/" class="flex justify-center p-8"
+              ><Button text="Annuller" /></a
+            >
+          </div>
         </div>
 
-        <!-- Step 3: Oversigt -->
+        <!-- step3 - oversigt over din valgte abonnement + genre evt -->
         <div x-show="step === 3" class="space-y-6">
           <h3
             class="fade-in font-serif lg:text-h3 text-[8vw] uppercase font-bold p-4 text-center"
@@ -149,14 +143,19 @@ import Buttontwo from "../components/Buttontwo.astro";
               </p>
             </div>
           </div>
-          <div class="flex justify-center gap-4">
-            <Button text="Annuller" />
+          <div class="flex justify-center">
+            <button @click="step = 2" class="font-light italic"
+              >⟵ Tilbage</button
+            >
 
+            <a href="/" class="flex justify-center p-8"
+              ><Button text="Annuller" /></a
+            >
             <Buttontwo text="Gå til betaling" />
           </div>
         </div>
 
-        <!-- Step 4: Betaling -->
+        <!-- step4 - betaling -->
         <div x-show="step === 4" class="space-y-6">
           <h3
             class="fade-in font-serif lg:text-h3 text-[8vw] uppercase font-bold p-4 text-center"
@@ -193,7 +192,6 @@ import Buttontwo from "../components/Buttontwo.astro";
                       type="text"
                       id="name"
                       placeholder="Indtast dit fulde navn"
-                      required
                       class="mt-1 bg-farvenavn-whiteish block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
                                   focus:ring-farvenavn-primary focus:border-farvenavn-primary"
                     />
@@ -211,7 +209,6 @@ import Buttontwo from "../components/Buttontwo.astro";
                       type="email"
                       id="email"
                       placeholder="Indtast din e-mail"
-                      required
                       class="mt-1 bg-farvenavn-whiteish block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
                                   focus:ring-farvenavn-primary focus:border-farvenavn-primary"
                     />
@@ -229,7 +226,6 @@ import Buttontwo from "../components/Buttontwo.astro";
                       type="text"
                       id="address"
                       placeholder="Indtast din adresse"
-                      required
                       class="mt-1 bg-farvenavn-whiteish block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
                                   focus:ring-farvenavn-primary focus:border-farvenavn-primary"
                     />
@@ -247,7 +243,6 @@ import Buttontwo from "../components/Buttontwo.astro";
                       type="text"
                       id="city"
                       placeholder="Indtast din by"
-                      required
                       class="mt-1 bg-farvenavn-whiteish block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
                                   focus:ring-farvenavn-primary focus:border-farvenavn-primary"
                     />
@@ -265,7 +260,6 @@ import Buttontwo from "../components/Buttontwo.astro";
                       type="text"
                       id="state"
                       placeholder="Indtast din stat"
-                      required
                       class="mt-1 bg-farvenavn-whiteish block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
                                   focus:ring-farvenavn-primary focus:border-farvenavn-primary"
                     />
@@ -283,7 +277,6 @@ import Buttontwo from "../components/Buttontwo.astro";
                       type="text"
                       id="zip"
                       placeholder="Indtast dit postnummer"
-                      required
                       class="mt-1 bg-farvenavn-whiteish block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
                                   focus:ring-farvenavn-primary focus:border-farvenavn-primary"
                     />
@@ -311,7 +304,6 @@ import Buttontwo from "../components/Buttontwo.astro";
                       type="text"
                       id="cardName"
                       placeholder="Indtast kortindehaverens navn"
-                      required
                       class="mt-1 bg-farvenavn-whiteish block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
                                   focus:ring-farvenavn-primary focus:border-farvenavn-primary"
                     />
@@ -329,7 +321,6 @@ import Buttontwo from "../components/Buttontwo.astro";
                       type="text"
                       id="cardNumber"
                       placeholder="Indtast kortnummer"
-                      required
                       class="mt-1 bg-farvenavn-whiteish block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
                                   focus:ring-farvenavn-primary focus:border-farvenavn-primary"
                     />
@@ -349,7 +340,6 @@ import Buttontwo from "../components/Buttontwo.astro";
                         type="text"
                         id="expMonth"
                         placeholder="MM"
-                        required
                         class="mt-1 bg-farvenavn-whiteish block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
                                   focus:ring-farvenavn-primary focus:border-farvenavn-primary"
                       />
@@ -366,7 +356,6 @@ import Buttontwo from "../components/Buttontwo.astro";
                         type="text"
                         id="expYear"
                         placeholder="YYYY"
-                        required
                         class="mt-1 bg-farvenavn-whiteish block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
                                   focus:ring-farvenavn-primary focus:border-farvenavn-primary"
                       />
@@ -385,7 +374,6 @@ import Buttontwo from "../components/Buttontwo.astro";
                       type="text"
                       id="cvv"
                       placeholder="Indtast CVV"
-                      required
                       class="mt-1 bg-farvenavn-whiteish block w-full border-farvenavn-accent rounded-lg text-farvenavn-blackish
                                   focus:ring-farvenavn-primary focus:border-farvenavn-primary"
                     />
@@ -394,9 +382,15 @@ import Buttontwo from "../components/Buttontwo.astro";
               </div>
 
               <!-- Knap til at indsende formularen -->
-              <div class="flex justify-between pt-4">
-                <Button text="Annuller" />
-                <Buttontwo text="Køb abonnement" />
+              <div class="flex justify-center w-full">
+                <button @click="step = 3" class="font-light italic w-full"
+                  >⟵ Tilbage</button
+                >
+
+                <a href="/" class="flex justify-center p-8"
+                  ><Button text="Annuller" /></a
+                >
+                <Buttontwo text="bekræft" />
               </div>
             </form>
           </div>
@@ -405,4 +399,20 @@ import Buttontwo from "../components/Buttontwo.astro";
     </section>
     <img src="/btmborder.svg" alt="" class="mt-[-1px] mb-20 w-[100vw]" />
   </div>
+
+  <!-- style - css til fade-in-sektionen -->
+  <style>
+    .fade-in {
+      filter: opacity(0) !important;
+      transform: translatey(70px);
+      transition:
+        filter 2s ease,
+        transform 2s ease;
+    }
+
+    .in-view {
+      filter: opacity(1) !important;
+      transform: translateX(0);
+    }
+  </style>
 </MainLayout>

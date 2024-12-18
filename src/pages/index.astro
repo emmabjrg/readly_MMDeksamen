@@ -7,6 +7,7 @@ import Genre from "../components/Genre.astro";
 import Faq from "../components/Faq.astro";
 ---
 
+<!-- preloader css -->
 <style>
   @keyframes load-up {
     0% {
@@ -20,14 +21,16 @@ import Faq from "../components/Faq.astro";
   }
 </style>
 <MainLayout title="Readly">
+  <!-- preloader html -->
   <div
     id="preloader"
     class="fixed inset-0 flex items-center justify-center bg-farvenavn-primary z-50"
   >
     <img src="preloader.svg" alt="Logo" id="logo" class="w-72 load-animation" />
   </div>
-
+  <!-- index-kode -->
   <div class="fade-in flex justify-center lg:mt-20 mt-16">
+    <!-- hero -->
     <section
       class="border-dashed border-2 border-farvenavn-blackish rounded-[80px] lg:rounded-[140px] bg-farvenavn-whiteish lg:w-[83%] w-[90%] lg:p-12 p-6"
     >
@@ -55,6 +58,7 @@ import Faq from "../components/Faq.astro";
       </div>
     </section>
   </div>
+  <!-- how-to -->
   <section
     class="fade-in flex flex-col lg:flex-row gap-16 mx-24 mt-24 items-baseline justify-center"
   >
@@ -80,6 +84,7 @@ import Faq from "../components/Faq.astro";
       />
     </div>
   </section>
+  <!-- sektionen med top + btm border, med abonnement oversigt samt genre-oversigten -->
   <section class="lg:mt-28 mt-10 fade-in">
     <img src="/topborder.svg" alt="" class="mb-[-1px] w-auto" />
     <section class="bg-farvenavn-whiteish lg:pt-0 pt-6">
@@ -97,14 +102,20 @@ import Faq from "../components/Faq.astro";
           skriv="Foretrækker du krimi, romantik eller måske fantasy?"
           text={`Med Genrebox vælger du selv, hvilken type bog der lander i din postkasse hver måned.`}
           text2="Din bog, din stil, dit valg."
-        />
+        >
+          <a href="/genrebox" class="self-center"><Button text="Læs mere" /></a>
+        </Abonnement>
 
         <Abonnement
           titel="Surprisebox"
           skriv="Er du klar til at udforske noget nyt litterært?"
           text={`Surprisebox sender dig månedens bedste bog - fra en genre, du muligvis aldrig har prøvet før. `}
           text2="Perfekt til den nysgerrige læser."
-        />
+        >
+          <a href="/surprisebox" class="self-center"
+            ><Button text="Læs mere" /></a
+          >
+        </Abonnement>
       </div>
       <div class="mt-28 fade-in">
         <h3
@@ -116,6 +127,7 @@ import Faq from "../components/Faq.astro";
     </section>
     <img src="/btmborder.svg" alt="" class="mt-[-1px] w-auto" />
   </section>
+  <!-- faq-sektionen -->
   <section class="lg:my-20 my-10 lg:mx-60 mx-10 flex flex-col justify-content">
     <h3
       class="fade-in text-mobile_h3 lg:text-h3 font-serif text-center font-bold text-farvenavn-whiteish pb-10"
@@ -124,8 +136,8 @@ import Faq from "../components/Faq.astro";
     </h3>
     <Faq />
   </section>
+  <!-- style - css til fade-in-sektionen -->
   <style>
-    /*--------------- face-in effekten!!!!!!!! ----------------*/
     .fade-in {
       filter: opacity(0) !important;
       transform: translatey(70px);

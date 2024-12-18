@@ -5,7 +5,9 @@ import Genre from "../components/Genre.astro";
 ---
 
 <MainLayout title="Genrebox">
+  <!-- genrebox-kode -->
   <div class="flex justify-center mt-20 fade-in">
+    <!-- genrebox-boksen med border og de tre step + knap til abonnementvælger -->
     <div
       class="border-dashed border-2 border-farvenavn-blackish rounded-[80px] lg:rounded-[140px] bg-farvenavn-whiteish lg:w-[83%] w-[90%] lg:p-12 p-10 flex flex-col justify-center items-center text-center"
     >
@@ -58,6 +60,7 @@ import Genre from "../components/Genre.astro";
       </div>
     </div>
   </div>
+  <!-- overblik over genrene man kan vælge imellem + et par tidligere valgmuligheder -->
   <section class="mt-20 fade-in">
     <img src="/topborder.svg" alt="" class="mb-[-1px] w-auto" />
 
@@ -66,7 +69,7 @@ import Genre from "../components/Genre.astro";
     </section>
     <img src="/btmborder.svg" alt="" class="mt-[-1px] w-auto" />
   </section>
-
+  <!-- en kontakt-os-knap -->
   <section class="flex flex-col justify-center gap-4 pt-28 pb-20 fade-in">
     <h4
       class="lg:text-h4 text-[4vw] uppercase text-farvenavn-whiteish font-medium font-serif text-center"
@@ -75,8 +78,8 @@ import Genre from "../components/Genre.astro";
     </h4>
     <Button text="Kontakt os" />
   </section>
+  <!-- style - css til fade-in-sektionen -->
   <style>
-    /*--------------- face-in effekten!!!!!!!! ----------------*/
     .fade-in {
       filter: opacity(0) !important;
       transform: translatey(70px);
