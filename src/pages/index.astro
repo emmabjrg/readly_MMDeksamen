@@ -27,7 +27,7 @@ import Faq from "../components/Faq.astro";
     <img src="preloader.svg" alt="Logo" id="logo" class="w-72 load-animation" />
   </div> -->
 
-  <div class="flex justify-center lg:mt-20 mt-16">
+  <div class="fade-in flex justify-center lg:mt-20 mt-16">
     <section
       class="border-dashed border-2 border-farvenavn-blackish rounded-[80px] lg:rounded-[140px] bg-farvenavn-whiteish lg:w-[83%] w-[90%] lg:p-12 p-6"
     >
@@ -56,23 +56,23 @@ import Faq from "../components/Faq.astro";
     </section>
   </div>
   <section
-    class="flex flex-col lg:flex-row gap-16 mx-24 mt-24 items-baseline justify-center"
+    class="fade-in flex flex-col lg:flex-row gap-16 mx-24 mt-24 items-baseline justify-center"
   >
-    <div class="flex justify-center flex-col items-center">
+    <div class="flex justify-center flex-col items-center fade-in">
       <img src="choice.svg" alt="" class="w-[40%] mb-10" />
       <Howto
         titel="Vælg din vej"
         text="Vælg din yndlingsgenre, eller lad dig overraske med en bog fra en helt ny verden. Uanset hvad, er din næste læseoplevelse kun få klik væk."
       />
     </div>
-    <div class="flex justify-center flex-col items-center">
+    <div class="flex justify-center flex-col items-center fade-in">
       <img src="openbook.svg" alt="" class="w-[40%] mb-10" />
       <Howto
         titel="Vi finder den perfekte bog"
         text="Vores team håndplukker månedens bedste bog inden for din valgte genre – eller en overraskelse, der garanteret vil inspirere dig."
       />
     </div>
-    <div class="flex justify-center flex-col items-center">
+    <div class="flex justify-center flex-col items-center fade-in">
       <img src="bookstack.svg" alt="" class="w-[40%] mb-10" />
       <Howto
         titel="Læs, nyd og gentag"
@@ -80,11 +80,11 @@ import Faq from "../components/Faq.astro";
       />
     </div>
   </section>
-  <section class="lg:mt-28 mt-10">
+  <section class="lg:mt-28 mt-10 fade-in">
     <img src="/topborder.svg" alt="" class="mb-[-1px] w-auto" />
     <section class="bg-farvenavn-whiteish lg:pt-0 pt-6">
       <h3
-        class="text-mobile_h3 lg:text-h3 font-serif uppercase text-center font-bold text-farvenavn-blackish pb-10"
+        class="fade-in text-mobile_h3 lg:text-h3 font-serif uppercase text-center font-bold text-farvenavn-blackish pb-10"
       >
         Abonnementer
       </h3>
@@ -98,6 +98,7 @@ import Faq from "../components/Faq.astro";
           text={`Med Genrebox vælger du selv, hvilken type bog der lander i din postkasse hver måned.`}
           text2="Din bog, din stil, dit valg."
         />
+
         <Abonnement
           titel="Surprisebox"
           skriv="Er du klar til at udforske noget nyt litterært?"
@@ -105,9 +106,9 @@ import Faq from "../components/Faq.astro";
           text2="Perfekt til den nysgerrige læser."
         />
       </div>
-      <div class="mt-28">
+      <div class="mt-28 fade-in">
         <h3
-          class="text-mobile_h3 lg:text-h3 font-serif text-center font-bold text-farvenavn-blackish pb-10"
+          class="fade-in text-mobile_h3 lg:text-h3 font-serif text-center font-bold text-farvenavn-blackish pb-10"
         >
           GENRE
         </h3><Genre />
@@ -117,7 +118,7 @@ import Faq from "../components/Faq.astro";
   </section>
   <section class="lg:my-20 my-10 lg:mx-60 mx-10 flex flex-col justify-content">
     <h3
-      class="text-mobile_h3 lg:text-h3 font-serif text-center font-bold text-farvenavn-whiteish pb-10"
+      class="fade-in text-mobile_h3 lg:text-h3 font-serif text-center font-bold text-farvenavn-whiteish pb-10"
     >
       FAQ
     </h3>
@@ -127,7 +128,7 @@ import Faq from "../components/Faq.astro";
     /*--------------- face-in effekten!!!!!!!! ----------------*/
     .fade-in {
       filter: opacity(0) !important;
-      transform: translateX(70px);
+      transform: translatey(70px);
       transition:
         filter 2s ease,
         transform 2s ease;

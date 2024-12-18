@@ -6,15 +6,17 @@ import Abonnement from "./abonnement.astro";
 ---
 
 <MainLayout title="Genrebox">
-  <div class="flex justify-center mt-20">
+  <div class="flex justify-center mt-20 fade-in">
     <div
       class="border-dashed border-2 border-farvenavn-blackish rounded-[80px] lg:rounded-[140px] bg-farvenavn-whiteish lg:w-[83%] w-[90%] lg:p-12 p-10 flex flex-col justify-center items-center text-center"
     >
-      <h2 class="font-serif lg:text-h2 text-mobile_h2 uppercase font-bold p-4">
+      <h2
+        class="fade-in font-serif lg:text-h2 text-mobile_h2 uppercase font-bold p-4"
+      >
         Genrebox
       </h2>
       <p
-        class="lg:text-p text-mobile_p leading-relaxed font-light lg:px-20 px-2"
+        class="fade-in lg:text-p text-mobile_p leading-relaxed font-light lg:px-20 px-2"
       >
         Med Genrebox får du muligheden for at vælge netop den genre, du elsker
         mest. Uanset om du er til nervepirrende krimier, romantiske fortællinger
@@ -22,42 +24,42 @@ import Abonnement from "./abonnement.astro";
         passer perfekt til din smag.
       </p>
       <div>
-        <h4 class="text-h4 font-serif italic mt-16 pb-2 font-bold">
+        <h4 class="fade-in text-h4 font-serif italic mt-16 pb-2 font-bold">
           Vælg din yndlingsgenre
         </h4>
         <p
-          class="lg:text-p text-mobile_p leading-relaxed font-light lg:px-20 px-10"
+          class="fade-in lg:text-p text-mobile_p leading-relaxed font-light lg:px-20 px-10"
         >
           Foretrækker du spænding, kærlighed eller eventyr? Gå på opdagelse i
           vores genrer, og vælg den, der passer til dig.
         </p>
       </div>
       <div>
-        <h4 class="text-h4 font-serif italic mt-12 pb-2 font-bold">
+        <h4 class="fade-in text-h4 font-serif italic mt-12 pb-2 font-bold">
           Modtag månedens bog
         </h4>
         <p
-          class="lg:text-p text-mobile_p leading-relaxed font-light lg:px-20 px-10"
+          class="fade-in lg:text-p text-mobile_p leading-relaxed font-light lg:px-20 px-10"
         >
           Hver måned sender vi dig en nøje udvalgt bog fra din valgte genre -
           altid med et nyt og spændende twist.
         </p>
       </div>
       <div class="mb-10">
-        <h4 class="text-h4 font-serif italic mt-12 pb-2 font-bold">
+        <h4 class="fade-in text-h4 font-serif italic mt-12 pb-2 font-bold">
           Fordyb dig i historien
         </h4>
-        <p class="lg:text-p text-mobile_p font-light lg:px-20 px-10">
+        <p class="fade-in lg:text-p text-mobile_p font-light lg:px-20 px-10">
           Sæt dig godt til rette, og nyd en bog, der er valgt specielt til dig.
           Perfekt til rolige stunder eller som inspiration til din bogreol.
         </p>
       </div>
-      <div class="p-4">
+      <div class="p-4 fade-in">
         <a href="/abonnement"><Button text="Til abonnementsvælger" /></a>
       </div>
     </div>
   </div>
-  <section class="mt-20">
+  <section class="mt-20 fade-in">
     <img src="/topborder.svg" alt="" class="mb-[-1px] w-auto" />
 
     <section class="bg-farvenavn-whiteish">
@@ -66,7 +68,7 @@ import Abonnement from "./abonnement.astro";
     <img src="/btmborder.svg" alt="" class="mt-[-1px] w-auto" />
   </section>
 
-  <section class="flex flex-col justify-center gap-4 pt-28 pb-20">
+  <section class="flex flex-col justify-center gap-4 pt-28 pb-20 fade-in">
     <h4
       class="lg:text-h4 text-[4vw] uppercase text-farvenavn-whiteish font-medium font-serif text-center"
     >
@@ -74,4 +76,19 @@ import Abonnement from "./abonnement.astro";
     </h4>
     <Button text="Kontakt os" />
   </section>
+  <style>
+    /*--------------- face-in effekten!!!!!!!! ----------------*/
+    .fade-in {
+      filter: opacity(0) !important;
+      transform: translatey(70px);
+      transition:
+        filter 2s ease,
+        transform 2s ease;
+    }
+
+    .in-view {
+      filter: opacity(1) !important;
+      transform: translateX(0);
+    }
+  </style>
 </MainLayout>
