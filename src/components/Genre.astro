@@ -4,10 +4,9 @@ import Genrekortblue from "../components/Genrekortblue.astro";
 ---
 
 <div class="w-full relative p-0 pb-10 lg:p-10">
-  <!-- Responsiv padding -->
-  <!-- Swiper container -->
+  <!-- swiper-container -->
   <div class="swiper centered-slide-carousel relative fade-in">
-    <!-- Swiper Wrapper -->
+    <!-- swpier wrapper -->
     <div class="swiper-wrapper">
       <!-- bio genrekort -->
       <div class="swiper-slide w-full sm:w-[300px] shrink-0">
@@ -166,15 +165,16 @@ import Genrekortblue from "../components/Genrekortblue.astro";
   </div>
 </div>
 
+<!-- style-css til swiper-wrapperen -->
 <style>
   .swiper-wrapper {
-    display: flex !important; /* Sørger for at kortene vises på én række */
-    align-items: center; /* Centrerer vertikalt */
+    display: flex !important;
+    align-items: center;
   }
 
   /* Pagination dots */
   .swiper-pagination-bullet {
-    background-color: #ccc; /* Ikke-aktive dots */
+    background-color: #ccc;
     width: 12px;
     height: 12px;
     margin: 0 5px;
@@ -182,8 +182,8 @@ import Genrekortblue from "../components/Genrekortblue.astro";
 
   /* Aktive dot */
   .swiper-pagination-bullet-active {
-    background-color: #565cff; /* Aktive dot */
-    transform: scale(1.2); /* Gør den aktive prik større */
+    background-color: #565cff;
+    transform: scale(1.2);
   }
 
   @media (min-width: 1024px) {
@@ -196,7 +196,7 @@ import Genrekortblue from "../components/Genrekortblue.astro";
   }
 </style>
 
-<!-- Swiper Styles og Scripts -->
+<!-- style link og script til den swiper -->
 <link
   rel="stylesheet"
   href="https://unpkg.com/swiper@10/swiper-bundle.min.css"
