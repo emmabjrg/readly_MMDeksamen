@@ -6,25 +6,84 @@
   <div
     class="bg-farvenavn-accent rounded-full w-[80%] border border-farvenavn-blackish fixed p-4 flex justify-between z-40"
   >
-    <a href="/"><img src="/logo.svg" alt="" class="h-12 px-4" /></a>
-    <section class="flex items-center gap-6 mr-6">
-      <div class="font-sans font-light">
-        <a
-          href="/omreadly"
-          class="px-6 hover:text-farvenavn-primary hover:italic">Om Readly</a
-        ><a
-          href="/genrebox"
-          class="px-6 hover:text-farvenavn-primary hover:italic">Genrebox</a
-        ><a
-          href="/surprisebox"
-          class="px-6 hover:text-farvenavn-primary hover:italic">Surprisebox</a
-        ><a href="" class="px-6 hover:text-farvenavn-primary hover:italic"
-          >Tidligere boxe</a
-        >
-      </div><button
-        class="uppercase bg-farvenavn-primary rounded-full border transition border-farvenavn-blackish text-farvenavn-whiteish py-2 px-6 font-serif hover:opacity-70"
-        >Log ind</button
+    <a href="/"
+      ><img src="/logo.svg" alt="" class="h-12 px-4 relative z-50" /></a
+    >
+
+    <!-- Burger-menu ikon til små skærme -->
+    <button id="burger" class="block lg:hidden p-2 focus:outline-none">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 text-farvenavn-blackish"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Navigationslinks til store skærme -->
+    <section
+      class="hidden lg:flex items-center gap-6 mr-6 font-sans font-light"
+    >
+      <a href="/omreadly" class="px-6 hover:text-farvenavn-primary hover:italic"
+        >Om Readly</a
+      >
+      <a href="/genrebox" class="px-6 hover:text-farvenavn-primary hover:italic"
+        >Genrebox</a
+      >
+      <a
+        href="/surprisebox"
+        class="px-6 hover:text-farvenavn-primary hover:italic">Surprisebox</a
+      >
+      <a href="" class="px-6 hover:text-farvenavn-primary hover:italic"
+        >Tidligere boxe</a
       >
     </section>
+
+    <!-- Responsiv mobilmenu (hidden normalt) -->
+    <nav
+      id="menu"
+      class="hidden lg:hidden absolute top-12 pt-10 pb-8 left-0 w-full bg-farvenavn-accent flex flex-col items-center gap-6 p-4 border border-farvenavn-blackish border-t-0 rounded-b-3xl"
+    >
+      <a
+        href="/omreadly"
+        class="hover:text-farvenavn-primary hover:italic transition"
+        >Om Readly</a
+      >
+      <a
+        href="/genrebox"
+        class="hover:text-farvenavn-primary hover:italic transition">Genrebox</a
+      >
+      <a
+        href="/surprisebox"
+        class="hover:text-farvenavn-primary hover:italic transition"
+        >Surprisebox</a
+      >
+      <a href="" class="hover:text-farvenavn-primary hover:italic transition"
+        >Tidligere boxe</a
+      >
+    </nav>
+
+    <button
+      class="hidden lg:block uppercase bg-farvenavn-primary rounded-full border transition border-farvenavn-blackish text-farvenavn-whiteish py-2 px-6 font-serif hover:opacity-70"
+      >Log ind</button
+    >
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.querySelector("#burger");
+    const menu = document.querySelector("#menu");
+
+    burger.addEventListener("click", function () {
+      menu.classList.toggle("hidden");
+    });
+  });
+</script>
