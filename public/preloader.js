@@ -8,5 +8,5 @@ window.addEventListener("load", () => {
     setTimeout(() => {
       preloader.style.display = "none";
     }, 1000); 
-  }, 2100); 
+  }, 1800); 
 });
