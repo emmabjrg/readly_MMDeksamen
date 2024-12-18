@@ -6,7 +6,7 @@ import Buttontwo from "../components/Buttontwo.astro";
 
 <MainLayout title="Om Readly">
   <div>
-    <img src="/topborder.svg" alt="" class="mt-20 mb-[-1px] w-auto" />
+    <img src="/topborder.svg" alt="" class="mt-20 mb-[-1px] w-[100vw]" />
 
     <!-- Wrapper med Alpine.js -->
     <section class="bg-farvenavn-whiteish p-0 m-0">
@@ -17,7 +17,7 @@ import Buttontwo from "../components/Buttontwo.astro";
         <!-- Step 1: Vælg Abonnement -->
         <div x-show="step === 1" class="space-y-6">
           <h3
-            class="text-h3 font-bold font-serif uppercase text-center pb-4 w-full"
+            class="fade-in font-serif lg:text-h3 text-[8vw] uppercase font-bold p-4 text-center"
           >
             Vælg abonnement
           </h3>
@@ -52,7 +52,7 @@ import Buttontwo from "../components/Buttontwo.astro";
         <!-- Step 2: Vælg Genre -->
         <div x-show="step === 2" class="space-y-6">
           <h3
-            class="text-h3 font-bold font-serif uppercase text-center pb-4 w-full"
+            class="fade-in font-serif lg:text-h3 text-[8vw] uppercase font-bold p-4 text-center"
           >
             Hvilken genre?
           </h3>
@@ -101,14 +101,18 @@ import Buttontwo from "../components/Buttontwo.astro";
         <!-- Step 3: Oversigt -->
         <div x-show="step === 3" class="space-y-6">
           <h3
-            class="text-h3 font-bold font-serif uppercase text-center pb-4 w-full"
+            class="fade-in font-serif lg:text-h3 text-[8vw] uppercase font-bold p-4 text-center"
           >
             Din oversigt
           </h3>
           <div
-            class="py-16 bg-farvenavn-whitish rounded-[60px] border border-farvenavn-blackish flex justify-around items-center p-14 text-farvenavn-blackish"
+            class="py-16 bg-farvenavn-whitish rounded-[60px] border border-farvenavn-blackish lg:flex lg:flex-row flex flex-col justify-around lg:text-start text-center items-center p-14 text-farvenavn-blackish"
           >
-            <img src="/logo.svg" alt="" class="w-[40%]" />
+            <img
+              src="/logo.svg"
+              alt=""
+              class="lg:w-[40%] w-[60%] lg:pb-0 pb-10"
+            />
             <div class="">
               <p class="mb-4">
                 <span class="font-bold font-serif uppercase italic"
@@ -140,7 +144,7 @@ import Buttontwo from "../components/Buttontwo.astro";
         <!-- Step 4: Betaling -->
         <div x-show="step === 4" class="space-y-6">
           <h3
-            class="text-h3 font-bold font-serif uppercase text-center pb-4 w-full"
+            class="fade-in font-serif lg:text-h3 text-[8vw] uppercase font-bold p-4 text-center"
           >
             Bestil abonnemnet
           </h3>
@@ -384,6 +388,6 @@ import Buttontwo from "../components/Buttontwo.astro";
         </div>
       </div>
     </section>
-    <img src="/btmborder.svg" alt="" class="mt-[-1px] mb-20 w-auto" />
+    <img src="/btmborder.svg" alt="" class="mt-[-1px] mb-20 w-[100vw]" />
   </div>
 </MainLayout>
