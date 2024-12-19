@@ -5,7 +5,7 @@ import Buttontwo from "../components/Buttontwo.astro";
 ---
 
 <MainLayout title="Abonnement">
-  <div class="fade-in">
+  <div class="">
     <img src="/topborder.svg" alt="" class="mt-20 mb-[-1px] w-[100vw]" />
 
     <!-- abonnement-vælger-flow-wrapper -->
@@ -23,7 +23,7 @@ import Buttontwo from "../components/Buttontwo.astro";
           </h3>
           <!-- de to abonnementer som knapper - og ved klik fører de hhv til genrevalg og direkte til overblik (@click ... (ved klik skriv X som abonnement på step3, samt spring til step X når der klikkes)) -->
 
-          <div class="flex flex-col md:flex-row gap-6">
+          <div class="fade-in flex flex-col md:flex-row gap-6">
             <button
               @click="abonnement = 'Genrebox'; step = 2"
               class="w-full md:w-1/2 p-6 text-farvenavn-whiteish bg-farvenavn-primary rounded-3xl text-center font-bold text-h4 font-serif uppercase hover:bg-farvenavn-blackish transition border border-farvenavn-blackish"
@@ -45,7 +45,7 @@ import Buttontwo from "../components/Buttontwo.astro";
               >
             </button>
           </div>
-          <div class="flex justify-center">
+          <div class="flex justify-center fade-in">
             <a href="/" class="flex justify-center p-8"
               ><Button text="Annuller" /></a
             >
@@ -61,7 +61,7 @@ import Buttontwo from "../components/Buttontwo.astro";
           </h3>
           <!-- div med buttons, hvor @click tilføjer den X til genre i step 3, og springer videre til næste step. -->
 
-          <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-4 fade-in">
             <button
               @click="genre = 'Biografier & Non-fiktion'; step = 3"
               class="p-3 text-p font-serif transition font-medium bg-farvenavn-primary rounded-full hover:bg-farvenavn-blackish text-farvenavn-whiteish border border-farvenavn-blackish text-center"
@@ -98,7 +98,7 @@ import Buttontwo from "../components/Buttontwo.astro";
               Krimi & Spænding
             </button>
           </div>
-          <div class="flex justify-center">
+          <div class="flex justify-center fade-in">
             <button
               @click="step = 1"
               class="block font-light italic transition hover:text-farvenavn-primary"
@@ -119,7 +119,7 @@ import Buttontwo from "../components/Buttontwo.astro";
             Din oversigt
           </h3>
           <div
-            class="py-16 bg-farvenavn-whitish rounded-[60px] border border-farvenavn-blackish lg:flex lg:flex-row flex flex-col justify-around lg:text-start text-center items-center p-14 text-farvenavn-blackish"
+            class="fade-in py-16 bg-farvenavn-whitish rounded-[60px] border border-farvenavn-blackish lg:flex lg:flex-row flex flex-col justify-around lg:text-start text-center items-center p-14 text-farvenavn-blackish"
           >
             <img
               src="/logo.svg"
@@ -147,7 +147,7 @@ import Buttontwo from "../components/Buttontwo.astro";
               </p>
             </div>
           </div>
-          <div class="flex justify-center">
+          <div class="fade-in flex justify-center">
             <button
               @click="step = 2"
               class="block font-light italic transition hover:text-farvenavn-primary"
@@ -172,7 +172,7 @@ import Buttontwo from "../components/Buttontwo.astro";
             <!-- formularen til betaling + levering -->
             <form
               action="#"
-              class="max-w-xl mx-auto bg-farvenavn-whiteish p-8 rounded-[40px] border border-farvenavn-blackish"
+              class="fade-in max-w-xl mx-auto bg-farvenavn-whiteish p-8 rounded-[40px] border border-farvenavn-blackish"
             >
               <!-- layout - grid ...  -->
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -385,7 +385,7 @@ import Buttontwo from "../components/Buttontwo.astro";
               </div>
 
               <!-- knapperne til at indsende formularen - eller annullere -->
-              <div class="flex justify-center w-full">
+              <div class="flex justify-center w-full fade-in">
                 <button
                   @click="step = 3"
                   class="block font-light italic transition hover:text-farvenavn-primary"
