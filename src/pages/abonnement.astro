@@ -17,13 +17,13 @@ import Buttontwo from "../components/Buttontwo.astro";
         <!-- step1 - vælg abonnement -->
         <div x-show="step === 1" class="space-y-6">
           <h3
-            class="fade-in font-serif lg:text-h3 text-[8vw] uppercase font-bold p-4 text-center"
+            class="font-serif lg:text-h3 text-[8vw] uppercase font-bold p-4 text-center"
           >
             Vælg abonnement
           </h3>
           <!-- de to abonnementer som knapper - og ved klik fører de hhv til genrevalg og direkte til overblik (@click ... (ved klik skriv X som abonnement på step3, samt spring til step X når der klikkes)) -->
 
-          <div class="fade-in flex flex-col md:flex-row gap-6">
+          <div class="flex flex-col md:flex-row gap-6">
             <button
               @click="abonnement = 'Genrebox'; step = 2"
               class="w-full md:w-1/2 p-6 text-farvenavn-whiteish bg-farvenavn-primary rounded-3xl text-center font-bold text-h4 font-serif uppercase hover:bg-farvenavn-blackish transition border border-farvenavn-blackish"
@@ -45,7 +45,7 @@ import Buttontwo from "../components/Buttontwo.astro";
               >
             </button>
           </div>
-          <div class="flex justify-center fade-in">
+          <div class="flex justify-center">
             <a href="/" class="flex justify-center p-8"
               ><Button text="Annuller" /></a
             >
